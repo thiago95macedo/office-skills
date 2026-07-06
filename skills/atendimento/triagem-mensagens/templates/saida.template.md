@@ -1,0 +1,1 @@
+Tabela com urgência, tipo, área, SLA, próxima ação.

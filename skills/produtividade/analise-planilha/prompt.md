@@ -1,0 +1,1 @@
+Analise dados tabulares e produza insights.

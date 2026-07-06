@@ -1,0 +1,1 @@
+Tipo + volumetria + usuários + restrições.

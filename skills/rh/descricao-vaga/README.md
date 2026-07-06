@@ -1,0 +1,1 @@
+Redige descrições de vaga objetivas e inclusivas.

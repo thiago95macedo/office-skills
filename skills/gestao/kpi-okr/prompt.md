@@ -1,0 +1,1 @@
+Defina KPIs mensuráveis e OKRs claros.

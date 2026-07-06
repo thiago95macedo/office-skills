@@ -1,0 +1,1 @@
+5 blocos: contexto, comportamento, impacto, próximo passo, apoio.

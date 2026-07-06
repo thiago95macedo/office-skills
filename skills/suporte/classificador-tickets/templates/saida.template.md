@@ -1,0 +1,1 @@
+Categoria + prioridade + área + SLA.

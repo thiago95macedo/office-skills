@@ -1,0 +1,1 @@
+Follow-up multi-canal (e-mail + LinkedIn).

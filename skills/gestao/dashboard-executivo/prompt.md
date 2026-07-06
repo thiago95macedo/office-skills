@@ -1,0 +1,1 @@
+Resuma indicadores para a diretoria.

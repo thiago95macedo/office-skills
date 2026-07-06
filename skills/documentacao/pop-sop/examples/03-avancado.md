@@ -1,0 +1,1 @@
+POP para processo crítico com dupla verificação.

@@ -1,0 +1,1 @@
+Gere one-pager escaneável.

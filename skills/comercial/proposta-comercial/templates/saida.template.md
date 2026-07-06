@@ -1,0 +1,1 @@
+Proposta com 11 seções padrão conforme SKILL.md.

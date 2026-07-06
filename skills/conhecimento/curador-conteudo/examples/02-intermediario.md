@@ -1,0 +1,1 @@
+Briefing temático com 15 itens.

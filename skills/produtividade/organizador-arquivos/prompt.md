@@ -1,0 +1,1 @@
+Proponha estrutura e nomenclatura.

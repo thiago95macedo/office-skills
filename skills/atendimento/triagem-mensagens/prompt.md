@@ -1,0 +1,1 @@
+Classifique mensagens por urgência, tipo, área e SLA.

@@ -1,0 +1,1 @@
+Avaliação semestral com 8 critérios e PDI trimestral.

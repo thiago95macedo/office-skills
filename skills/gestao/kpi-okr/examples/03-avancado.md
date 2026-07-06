@@ -1,0 +1,1 @@
+KPIs e OKRs multi-área alinhados.

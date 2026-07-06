@@ -1,0 +1,1 @@
+Sequência de e-mails com cronograma.

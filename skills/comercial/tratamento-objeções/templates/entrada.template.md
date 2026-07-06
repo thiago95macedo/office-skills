@@ -1,0 +1,1 @@
+Objeção, contexto, evidências.

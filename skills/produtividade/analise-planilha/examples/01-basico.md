@@ -1,0 +1,1 @@
+Análise de planilha de vendas.

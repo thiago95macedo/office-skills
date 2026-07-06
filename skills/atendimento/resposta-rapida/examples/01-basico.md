@@ -1,0 +1,1 @@
+Resposta de confirmação de recebimento.

@@ -1,0 +1,1 @@
+Bloco de reconhecimento + argumentos + ação.

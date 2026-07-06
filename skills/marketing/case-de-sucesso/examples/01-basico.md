@@ -1,0 +1,1 @@
+Case com 3 resultados mensuráveis.

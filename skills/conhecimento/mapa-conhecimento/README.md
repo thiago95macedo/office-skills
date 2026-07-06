@@ -1,0 +1,1 @@
+Mapeia ativos de conhecimento.

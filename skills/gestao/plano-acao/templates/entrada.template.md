@@ -1,0 +1,1 @@
+Objetivo, ações, responsáveis, prazos, indicadores.

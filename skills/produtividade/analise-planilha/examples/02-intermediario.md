@@ -1,0 +1,1 @@
+Análise multi-aba com cruzamento.

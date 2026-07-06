@@ -1,0 +1,1 @@
+Destinatário, assunto, mensagem, tom, anexos.

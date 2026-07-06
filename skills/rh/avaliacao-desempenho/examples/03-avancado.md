@@ -1,0 +1,1 @@
+Avaliação de trainee com curva de aprendizado mês a mês.

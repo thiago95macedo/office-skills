@@ -1,0 +1,1 @@
+Documento + extensão do resumo + foco + público.

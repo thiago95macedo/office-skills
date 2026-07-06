@@ -1,0 +1,1 @@
+Traduza mantendo tom e terminologia.

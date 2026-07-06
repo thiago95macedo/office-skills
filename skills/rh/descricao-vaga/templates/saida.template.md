@@ -1,0 +1,1 @@
+Estrutura padrão: empresa + propósito + responsabilidades + requisitos + benefícios + candidatura.

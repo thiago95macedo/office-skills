@@ -1,0 +1,1 @@
+Cabeçalho + corpo + local/data + assinatura.

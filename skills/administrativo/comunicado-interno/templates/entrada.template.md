@@ -1,0 +1,1 @@
+Público, mensagem, tom, canal.

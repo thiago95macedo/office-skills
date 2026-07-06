@@ -1,0 +1,1 @@
+Resumo de estudo técnico de 30 páginas.

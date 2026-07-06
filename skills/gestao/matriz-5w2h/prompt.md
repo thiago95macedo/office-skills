@@ -1,0 +1,1 @@
+Preencha 5W2H com clareza.

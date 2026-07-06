@@ -1,0 +1,1 @@
+Padronização de proposta regulada.

@@ -1,0 +1,1 @@
+Proponha estrutura de pastas e nomes.

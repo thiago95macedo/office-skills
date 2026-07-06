@@ -1,0 +1,1 @@
+Objeções múltiplas em cadeia.

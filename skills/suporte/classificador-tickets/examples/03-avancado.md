@@ -1,0 +1,1 @@
+Cliente VIP com impacto crítico.

@@ -1,0 +1,1 @@
+Resumo executivo + cenários + ROI + payback + riscos + alternativas.

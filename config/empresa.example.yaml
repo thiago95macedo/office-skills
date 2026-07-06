@@ -1,0 +1,27 @@
+# Configuração exemplo de empresa
+# Copie para config/empresa.yaml e ajuste conforme a organização.
+
+empresa:
+  nome: "Empresa Exemplo S.A."
+  cnpj: "00.000.000/0001-00"
+  tom: "formal"               # formal | semiformal | informal
+  vocabulario_bloqueado:
+    - "revolucionário"
+    - "incomparável"
+    - "líder absoluto"
+  preferencias:
+    data_format: "DD/MM/YYYY"
+    moeda: "BRL"
+    idioma_padrao: "pt-BR"
+
+departamentos:
+  comercial:
+    email: "comercial@empresa.com.br"
+    responsavel_padrao: "Diretoria Comercial"
+  financeiro:
+    email: "financeiro@empresa.com.br"
+
+assinatura_padrao: |
+  Atenciosamente,
+  Equipe {{empresa.nome}}
+  {{empresa.departamentos.comercial.email}}

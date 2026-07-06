@@ -1,0 +1,1 @@
+Tabela 5W2H.

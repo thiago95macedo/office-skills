@@ -1,0 +1,1 @@
+Classificação multi-tipo em lote.

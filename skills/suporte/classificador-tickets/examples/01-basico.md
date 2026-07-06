@@ -1,0 +1,1 @@
+Ticket simples categorizado como solicitação.

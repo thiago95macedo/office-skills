@@ -1,0 +1,1 @@
+Lista estruturada + exceções + confiança.

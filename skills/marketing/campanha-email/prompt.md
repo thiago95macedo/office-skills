@@ -1,0 +1,1 @@
+Produza sequência de e-mails com progressão lógica.

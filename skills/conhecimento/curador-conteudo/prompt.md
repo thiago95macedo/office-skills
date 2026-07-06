@@ -1,0 +1,1 @@
+Curadoria conforme objetivo.

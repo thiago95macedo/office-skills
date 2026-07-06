@@ -1,0 +1,1 @@
+FAQ de 10 perguntas sobre software.

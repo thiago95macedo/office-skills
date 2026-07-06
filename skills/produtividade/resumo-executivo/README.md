@@ -1,0 +1,1 @@
+Resume documentos longos.

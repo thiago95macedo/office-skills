@@ -1,0 +1,1 @@
+Extraia dados conforme schema.

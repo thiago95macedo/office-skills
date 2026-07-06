@@ -1,0 +1,1 @@
+Treinamento técnico de HPLC, 16h, com 6 módulos e avaliação prática.

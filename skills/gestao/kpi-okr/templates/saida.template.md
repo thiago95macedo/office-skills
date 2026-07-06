@@ -1,0 +1,1 @@
+KPIs (fórmula, meta, frequência) + OKRs.

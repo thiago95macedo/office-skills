@@ -1,0 +1,1 @@
+Transcrição multi-reunião com cruzamento.

@@ -1,0 +1,1 @@
+Transcrição + participantes + contexto.

@@ -1,0 +1,1 @@
+Follow-up após proposta sem resposta (7 dias).

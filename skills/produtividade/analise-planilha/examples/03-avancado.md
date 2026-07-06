@@ -1,0 +1,1 @@
+Análise com limpeza e outliers.

@@ -1,0 +1,1 @@
+Encaminhamento para financeiro.

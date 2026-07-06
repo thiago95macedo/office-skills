@@ -1,0 +1,1 @@
+Gere orçamento com base no escopo. Aplique impostos declarados. Não invente preços.

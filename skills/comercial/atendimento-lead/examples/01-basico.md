@@ -1,0 +1,1 @@
+Lead quente vindo de busca orgânica.

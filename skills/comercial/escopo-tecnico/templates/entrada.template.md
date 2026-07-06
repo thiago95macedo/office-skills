@@ -1,0 +1,1 @@
+Serviço, atividades, entregas, premissas, exclusões, responsabilidades.

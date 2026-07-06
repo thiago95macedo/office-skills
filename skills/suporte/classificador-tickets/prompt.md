@@ -1,0 +1,1 @@
+Classifique ticket por categoria, prioridade e área.

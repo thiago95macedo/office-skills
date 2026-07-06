@@ -1,0 +1,1 @@
+Sequência de 10 e-mails com ramificação condicional.

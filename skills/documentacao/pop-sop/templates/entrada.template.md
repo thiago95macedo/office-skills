@@ -1,0 +1,1 @@
+Título, objetivo, escopo, responsáveis, materiais, etapas, registros, referências.

@@ -1,0 +1,1 @@
+Finalidade, itens, agrupamento.

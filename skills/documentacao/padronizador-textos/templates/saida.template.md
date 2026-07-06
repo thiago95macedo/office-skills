@@ -1,0 +1,1 @@
+Texto padronizado + lista de alterações.

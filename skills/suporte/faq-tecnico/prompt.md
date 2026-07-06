@@ -1,0 +1,1 @@
+Construa FAQ técnico com referências.

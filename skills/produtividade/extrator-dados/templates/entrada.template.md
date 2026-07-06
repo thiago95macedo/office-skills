@@ -1,0 +1,1 @@
+Fonte + schema + política de ambiguidade.

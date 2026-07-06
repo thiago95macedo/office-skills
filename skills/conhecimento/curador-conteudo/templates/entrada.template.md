@@ -1,0 +1,1 @@
+Objetivo + fontes + formato de saída.

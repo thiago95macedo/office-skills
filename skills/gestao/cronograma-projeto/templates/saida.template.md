@@ -1,0 +1,1 @@
+Tabela de fases + diagrama textual.

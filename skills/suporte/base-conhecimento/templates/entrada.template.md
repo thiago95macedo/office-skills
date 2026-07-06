@@ -1,0 +1,1 @@
+Conteúdo atual + categorias + donos + ciclo de revisão.

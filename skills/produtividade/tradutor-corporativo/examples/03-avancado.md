@@ -1,0 +1,1 @@
+Manual multilíngue com glossário técnico.

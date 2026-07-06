@@ -1,0 +1,1 @@
+Traduz mantendo tom corporativo.

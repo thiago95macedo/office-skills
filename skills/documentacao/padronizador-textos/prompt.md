@@ -1,0 +1,1 @@
+Padronize o texto mantendo sentido.

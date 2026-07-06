@@ -1,0 +1,1 @@
+Lista curada + resumo + recomendações.

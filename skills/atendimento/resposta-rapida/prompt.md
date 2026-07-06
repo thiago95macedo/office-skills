@@ -1,0 +1,1 @@
+Gere resposta curta, cordial e com CTA.

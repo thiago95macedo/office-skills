@@ -1,0 +1,1 @@
+Mapeie ativos e identifique lacunas.

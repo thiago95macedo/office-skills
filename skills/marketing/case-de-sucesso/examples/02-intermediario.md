@@ -1,0 +1,1 @@
+Case regulado com aprovação formal.

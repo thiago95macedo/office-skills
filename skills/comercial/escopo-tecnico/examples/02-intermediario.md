@@ -1,0 +1,1 @@
+Escopo de qualificação IQ/OQ/PQ com 12 entregas.

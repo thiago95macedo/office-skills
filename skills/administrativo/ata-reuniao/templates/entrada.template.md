@@ -1,0 +1,1 @@
+Notas, participantes, data/hora/local.

@@ -1,0 +1,1 @@
+Respostas curtas e úteis.

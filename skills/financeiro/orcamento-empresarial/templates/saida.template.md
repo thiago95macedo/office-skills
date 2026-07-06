@@ -1,0 +1,1 @@
+Tabela por categoria + totais + variações + alertas + premissas.

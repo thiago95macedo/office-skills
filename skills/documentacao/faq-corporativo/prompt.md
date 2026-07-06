@@ -1,0 +1,1 @@
+Organize FAQ com clareza.

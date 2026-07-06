@@ -1,0 +1,1 @@
+5W2H para aquisição de equipamento crítico.

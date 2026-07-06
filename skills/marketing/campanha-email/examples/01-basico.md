@@ -1,0 +1,1 @@
+Sequência de 3 e-mails para lançamento.

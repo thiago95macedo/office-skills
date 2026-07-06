@@ -1,0 +1,1 @@
+Tradução + glossário aplicado + notas.

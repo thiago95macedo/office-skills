@@ -1,0 +1,1 @@
+Páginas institucionais com SEO básico.

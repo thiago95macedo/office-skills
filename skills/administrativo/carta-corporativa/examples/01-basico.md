@@ -1,0 +1,1 @@
+Carta de agradecimento a parceiro.

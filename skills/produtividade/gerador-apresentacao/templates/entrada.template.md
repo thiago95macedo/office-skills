@@ -1,0 +1,1 @@
+Objetivo + público + duração + mensagens-chave + CTA.

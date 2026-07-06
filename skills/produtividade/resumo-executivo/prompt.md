@@ -1,0 +1,1 @@
+Resuma em 1 página com conclusões e números.

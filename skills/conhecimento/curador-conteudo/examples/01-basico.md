@@ -1,0 +1,1 @@
+Newsletter com 5 itens.

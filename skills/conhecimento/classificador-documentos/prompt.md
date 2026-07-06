@@ -1,0 +1,1 @@
+Classifique documentos conforme taxonomia.

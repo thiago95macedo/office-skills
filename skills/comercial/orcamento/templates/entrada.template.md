@@ -1,0 +1,1 @@
+Escopo, tabela de preços, impostos, condições de pagamento.

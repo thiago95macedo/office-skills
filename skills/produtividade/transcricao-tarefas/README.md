@@ -1,0 +1,1 @@
+Converte transcrição em tarefas.

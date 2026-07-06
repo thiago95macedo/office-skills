@@ -1,0 +1,4 @@
+- Mensagem principal
+- Histórico
+- Próxima ação
+- Canal

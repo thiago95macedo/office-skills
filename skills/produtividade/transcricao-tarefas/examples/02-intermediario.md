@@ -1,0 +1,1 @@
+Transcrição de 1h, 15 tarefas com responsáveis.

@@ -1,0 +1,1 @@
+FAQ multilíngue com versionamento.

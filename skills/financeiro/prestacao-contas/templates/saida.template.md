@@ -1,0 +1,6 @@
+- Cabeçalho (período, responsável, centro de custo)
+- Tabela numerada
+- Totais
+- Saldo
+- Itens sem NF
+- Parecer

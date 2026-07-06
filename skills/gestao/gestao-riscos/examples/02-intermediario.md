@@ -1,0 +1,1 @@
+Riscos de implantação de sistema crítico.

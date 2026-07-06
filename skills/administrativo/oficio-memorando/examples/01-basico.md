@@ -1,0 +1,1 @@
+Memorando interno de mudança de procedimento.

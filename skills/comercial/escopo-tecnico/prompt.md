@@ -1,0 +1,1 @@
+Descreva escopo técnico em linguagem objetiva. Não invente atividades não informadas.

@@ -1,0 +1,1 @@
+Treinamento de boas práticas em laboratório, 2h, 8 participantes.

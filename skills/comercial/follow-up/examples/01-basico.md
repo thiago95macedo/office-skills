@@ -1,0 +1,1 @@
+Follow-up após reunião com CTA para enviar proposta.

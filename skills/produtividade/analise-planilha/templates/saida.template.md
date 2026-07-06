@@ -1,0 +1,1 @@
+Estatísticas + tendências + outliers + insights + recomendações.

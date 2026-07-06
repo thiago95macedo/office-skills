@@ -1,0 +1,1 @@
+Organiza base de conhecimento.

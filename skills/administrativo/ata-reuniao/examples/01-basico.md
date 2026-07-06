@@ -1,0 +1,1 @@
+Ata de reunião semanal de equipe.

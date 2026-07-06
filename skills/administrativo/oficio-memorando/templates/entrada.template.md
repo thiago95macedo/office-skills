@@ -1,0 +1,1 @@
+Tipo, destinatário, assunto, conteúdo.

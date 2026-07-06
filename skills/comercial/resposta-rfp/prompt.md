@@ -1,0 +1,1 @@
+Atenda cada requisito do edital com resposta clara.

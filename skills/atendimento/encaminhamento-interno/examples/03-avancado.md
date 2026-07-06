@@ -1,0 +1,1 @@
+Encaminhamento com escalonamento.

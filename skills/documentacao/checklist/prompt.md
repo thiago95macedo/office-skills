@@ -1,0 +1,1 @@
+Produza checklist objetivo e verificável.

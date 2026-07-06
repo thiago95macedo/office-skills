@@ -1,0 +1,1 @@
+Auditoria com lacunas e redundâncias.

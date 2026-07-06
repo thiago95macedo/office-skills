@@ -1,0 +1,1 @@
+Resumo 1 página + bullets + números-chave.
