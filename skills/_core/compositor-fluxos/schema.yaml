@@ -56,4 +56,4 @@ errors:
   - code: CONTRATO_INCOMPATIVEL
     when: saida de um step nao casa com entrada do proximo.
   - code: POLITICA_ABORTAR
-    when: politica_erro=abortar e algum step falho
+    when: politica_erro=abortar e algum step falhou.

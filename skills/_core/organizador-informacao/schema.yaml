@@ -45,4 +45,4 @@ errors:
   - code: SEM_FONTES
     when: nenhuma fonte informada.
   - code: SEM_OBJETIVO
-    when: objetivo_documento ausent
+    when: objetivo_documento ausente.
