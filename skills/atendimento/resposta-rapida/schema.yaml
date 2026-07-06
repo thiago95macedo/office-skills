@@ -1,0 +1,36 @@
+name: resposta-rapida
+category: atendimento
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - atendimento/triagem-mensagens
+
+inputs:
+  - name: mensagem_original
+    type: string
+    required: true
+    description: Mensagem original.
+  - name: contexto
+    type: object
+    required: true
+    description: Contexto adicional.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [cordial, neutro, empatico]
+    description: Tom da resposta.
+
+outputs:
+  - name: resposta_markdown
+    type: markdown
+    required: true
+    description: Resposta curta (max 80 palavras) com CTA.
+
+errors:
+  - code: SEM_MENSAGEM
+    when: mensagem_original ausente.

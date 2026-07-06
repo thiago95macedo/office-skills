@@ -1,0 +1,31 @@
+name: matriz-5w2h
+category: gestao
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - gestao/plano-acao
+
+composes_with:
+  - gestao/cronograma-projeto
+
+inputs:
+  - name: iniciativa
+    type: string
+    required: true
+    description: Nome da iniciativa.
+  - name: contexto
+    type: string
+    required: true
+    description: Contexto da iniciativa.
+
+outputs:
+  - name: matriz_markdown
+    type: markdown
+    required: true
+    description: Tabela com 7 perguntas (What, Why, Where, When, Who, How, How much).
+
+errors:
+  - code: SEM_INICIATIVA
+    when: iniciativa ausente.

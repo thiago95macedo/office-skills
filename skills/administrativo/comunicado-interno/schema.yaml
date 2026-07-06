@@ -1,0 +1,42 @@
+name: comunicado-interno
+category: administrativo
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - administrativo/email-corporativo
+
+inputs:
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo do comunicado.
+  - name: mensagem_central
+    type: text
+    required: true
+    description: Mensagem central.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [formal, semiformal, informal]
+    description: Tom do comunicado.
+  - name: canal
+    type: enum
+    required: false
+    enum_values: [mural, email, intranet]
+    default: email
+    description: Canal de divulgacao.
+
+outputs:
+  - name: comunicado_markdown
+    type: markdown
+    required: true
+    description: Comunicado pronto para distribuicao.
+
+errors:
+  - code: SEM_MENSAGEM
+    when: mensagem_central ausente.

@@ -1,0 +1,39 @@
+name: cronograma-projeto
+category: gestao
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - gestao/plano-acao
+  - gestao/gestao-riscos
+
+inputs:
+  - name: fases
+    type: list
+    required: true
+    description: Lista de fases do projeto.
+  - name: marcos
+    type: list
+    required: true
+    description: Lista de marcos com datas.
+  - name: dependencias
+    type: list
+    required: false
+    description: Dependencias entre fases.
+
+outputs:
+  - name: cronograma_markdown
+    type: markdown
+    required: true
+    description: Cronograma em Markdown (tabela ou diagrama textual).
+  - name: caminho_critico
+    type: list
+    required: true
+    description: Sequencia do caminho critico.
+
+errors:
+  - code: SEM_FASES
+    when: fases vazia.

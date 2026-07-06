@@ -1,0 +1,36 @@
+name: padronizador-textos
+category: documentacao
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+  - _core/configurador-empresa
+
+composes_with: []
+
+inputs:
+  - name: texto_original
+    type: text
+    required: true
+    description: Texto a ser padronizado.
+  - name: alvos_padronizacao
+    type: list
+    required: true
+    enum_values: [tom, vocabulario, formatacao, ortografia]
+    description: Alvos de padronizacao.
+
+outputs:
+  - name: texto_padronizado
+    type: markdown
+    required: true
+    description: Texto padronizado.
+  - name: alteracoes
+    type: list
+    required: true
+    description: Lista de alteracoes aplicadas.
+
+errors:
+  - code: SEM_TEXTO
+    when: texto_original ausente.

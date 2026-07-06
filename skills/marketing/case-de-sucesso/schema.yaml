@@ -1,0 +1,52 @@
+name: case-de-sucesso
+category: marketing
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - marketing/conteudo-linkedin
+  - marketing/conteudo-site
+
+inputs:
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Nome do cliente.
+  - name: cliente.setor
+    type: string
+    required: true
+    description: Setor do cliente.
+  - name: desafio
+    type: string
+    required: true
+    description: Desafio enfrentado.
+  - name: solucao
+    type: string
+    required: true
+    description: Solucao aplicada.
+  - name: resultados
+    type: list
+    required: true
+    description: Resultados mensuraveis.
+  - name: depoimento
+    type: string
+    required: false
+    description: Depoimento do cliente.
+  - name: aprovacao_cliente
+    type: boolean
+    required: true
+    description: Se ha aprovacao formal do cliente.
+
+outputs:
+  - name: case_markdown
+    type: markdown
+    required: true
+    description: Case estruturado com contexto, desafio, solucao, resultados.
+
+errors:
+  - code: SEM_APROVACAO
+    when: aprovacao_cliente e false.

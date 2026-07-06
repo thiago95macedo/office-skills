@@ -1,0 +1,64 @@
+name: apresentacao-comercial
+description: Pitch/dump para cliente potencial ou conselho
+version: 0.2.0
+tags:
+  - comercial
+  - pitch
+  - apresentacao
+
+inputs:
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Cliente ou conselho-alvo
+  - name: objetivo_negocio
+    type: text
+    required: true
+    description: Objetivo de negocio da apresentacao
+  - name: duracao_minutos
+    type: integer
+    required: true
+    description: Duracao em minutos
+
+outputs:
+  - name: apresentacao
+    description: Apresentacao estruturada
+  - name: cases_selecionados
+    description: Cases de sucesso usados
+  - name: faq_qa
+    description: FAQ para sessao de Q&A
+
+steps:
+  - id: one_pager
+    skill: comercial/one-pager
+    input_from:
+      assunto: inputs.objetivo_negocio
+    output: mensagem_central
+
+  - id: escopo_oferta
+    skill: comercial/escopo-tecnico
+    input_from:
+      servico: inputs.objetivo_negocio
+    output: oferta
+
+  - id: cases
+    skill: marketing/case-de-sucesso
+    input_from:
+      cliente: inputs.cliente
+    output: cases
+
+  - id: estrutura_slides
+    skill: produtividade/gerador-apresentacao
+    input_from:
+      objetivo: inputs.objetivo_negocio
+      duracao_minutos: inputs.duracao_minutos
+      mensagens_chave: mensagem_central.assunto
+    output: slides
+
+  - id: preparacao_qa
+    skill: comercial/tratamento-objecoes
+    input_from:
+      objecao: objecoes_esperadas_padrao
+    output: faq
+
+error_policy: abortar

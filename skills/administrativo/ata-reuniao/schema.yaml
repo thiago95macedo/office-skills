@@ -1,0 +1,50 @@
+name: ata-reuniao
+category: administrativo
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/organizador-informacao
+
+composes_with:
+  - gestao/plano-acao
+  - produtividade/transcricao-tarefas
+
+inputs:
+  - name: notas_reuniao
+    type: text
+    required: true
+    description: Notas brutas da reuniao.
+  - name: participantes
+    type: list
+    required: true
+    description: Lista de participantes.
+  - name: data_hora_local
+    type: object
+    required: true
+    description: Data, hora e local da reuniao.
+
+outputs:
+  - name: ata_markdown
+    type: markdown
+    required: true
+    description: Ata estruturada com decisoes e acoes.
+  - name: acoes
+    type: list
+    required: true
+    description: Lista de acoes com responsavel e prazo.
+  - name: decisoes
+    type: list
+    required: true
+    description: Lista de decisoes tomadas.
+  - name: proxima_reuniao
+    type: object
+    required: false
+    description: Dados da proxima reuniao.
+
+errors:
+  - code: SEM_NOTAS
+    when: notas_reuniao ausentes.
+  - code: SEM_PARTICIPANTES
+    when: participantes vazio.

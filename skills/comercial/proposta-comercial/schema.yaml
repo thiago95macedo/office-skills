@@ -1,0 +1,59 @@
+name: proposta-comercial
+category: comercial
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+  - comercial/escopo-tecnico
+  - comercial/orcamento
+
+composes_with:
+  - comercial/follow-up
+  - comercial/resposta-rfp
+  - comercial/tratamento-objecoes
+
+inputs:
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Nome do cliente.
+  - name: cliente.contato
+    type: string
+    required: true
+    description: Contato principal do cliente.
+  - name: escopo
+    type: object
+    required: true
+    description: Escopo tecnico detalhado (output de comercial/escopo-tecnico).
+  - name: orcamento
+    type: object
+    required: true
+    description: Orcamento detalhado (output de comercial/orcamento).
+  - name: condicoes_comerciais
+    type: object
+    required: true
+    description: Pagamento, validade, garantia, SLA.
+  - name: validade
+    type: date
+    required: true
+    description: Data de validade da proposta.
+  - name: cronograma
+    type: object
+    required: false
+    description: Cronograma do projeto.
+
+outputs:
+  - name: proposta_markdown
+    type: markdown
+    required: true
+    description: "Proposta completa com 11 secoes: resumo executivo, objetivo, escopo, atividades, exclusoes, premissas, cronograma, responsabilidades, condicoes comerciais, validade, contato."
+
+errors:
+  - code: SEM_CLIENTE
+    when: cliente.nome ou cliente.contato ausentes.
+  - code: SEM_ESCOPO
+    when: escopo nao informado.
+  - code: SEM_ORCAMENTO
+    when: orcamento nao informado.

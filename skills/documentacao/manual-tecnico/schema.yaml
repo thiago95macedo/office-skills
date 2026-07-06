@@ -1,0 +1,38 @@
+name: manual-tecnico
+category: documentacao
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+  - documentacao/pop-sop
+
+composes_with:
+  - documentacao/checklist
+  - rh/treinamento-materiais
+
+inputs:
+  - name: equipamento
+    type: string
+    required: true
+    description: Nome do equipamento/sistema.
+  - name: secoes
+    type: list
+    required: true
+    description: Lista de secoes do manual.
+  - name: nivel_tecnico
+    type: enum
+    required: true
+    enum_values: [basico, intermediario, avancado]
+    description: Nivel tecnico do publico.
+
+outputs:
+  - name: manual_markdown
+    type: markdown
+    required: true
+    description: Manual completo com sumario, instalacao, operacao, manutencao, troubleshooting.
+
+errors:
+  - code: SEM_EQUIPAMENTO
+    when: equipamento ausente.

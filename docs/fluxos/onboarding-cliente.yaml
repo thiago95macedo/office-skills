@@ -1,0 +1,78 @@
+name: onboarding-cliente
+description: Inicio de trabalho com cliente recem-contratado
+version: 0.2.0
+tags:
+  - gestao
+  - cliente
+  - kickoff
+
+inputs:
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Nome do cliente
+  - name: projeto.nome
+    type: string
+    required: true
+    description: Nome do projeto
+  - name: gestor_responsavel
+    type: string
+    required: true
+    description: Gestor do projeto
+
+outputs:
+  - name: mensagem_boas_vindas
+    description: Mensagem enviada ao cliente
+  - name: ata_kickoff
+    description: Ata da reuniao de kickoff
+  - name: plano_trabalho
+    description: Plano do primeiro mes
+
+steps:
+  - id: mensagem_boas_vindas
+    skill: comercial/follow-up
+    input_from:
+      contexto_interacao: inputs.cliente
+      tipo_followup: introducao
+      proximo_passo_desejado: agendar kickoff
+    output: boas_vindas
+
+  - id: agendar_kickoff
+    skill: administrativo/email-corporativo
+    input_from:
+      destinatario: inputs.cliente.contato
+      assunto: "Agendamento de kickoff"
+      mensagem_central: boas_vindas.mensagem
+    output: email_agendamento
+
+  - id: ata_kickoff
+    skill: administrativo/ata-reuniao
+    input_from:
+      notas_reuniao: kickoff_notas
+    output: ata
+
+  - id: plano_primeiro_mes
+    skill: gestao/plano-acao
+    input_from:
+      objetivo: "Entregar escopo do primeiro mes"
+    output: plano
+
+  - id: cronograma_macro
+    skill: gestao/cronograma-projeto
+    input_from:
+      fases: plano.fases
+    output: cronograma
+
+  - id: riscos_iniciais
+    skill: gestao/gestao-riscos
+    input_from:
+      contexto: inputs.projeto.nome
+    output: riscos
+
+  - id: comunicado_inicial
+    skill: administrativo/comunicado-interno
+    input_from:
+      mensagem_central: "Inicio de novo projeto"
+    output: comunicado
+
+error_policy: abortar

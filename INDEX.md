@@ -1,6 +1,6 @@
 # Catálogo de Skills — Office Skills
 
-Catálogo navegável das Skills disponíveis. Versão agregada: **0.1.0**.
+Catálogo navegável das Skills disponíveis. Versão agregada: **0.2.0**.
 
 > **Total: 60 Skills** distribuídas em 12 categorias. Veja `docs/mapa-dependencias.md` para entender como se relacionam, e `docs/fluxos/` para receitas que combinam várias Skills.
 
@@ -25,7 +25,7 @@ Catálogo navegável das Skills disponíveis. Versão agregada: **0.1.0**.
 | [`escopo-tecnico`](skills/comercial/escopo-tecnico/SKILL.md) | Descrever serviços com clareza técnica | ⭐ |
 | [`follow-up`](skills/comercial/follow-up/SKILL.md) | Mensagens de retorno após reunião, envio ou contato | 🔶 |
 | [`resposta-rfp`](skills/comercial/resposta-rfp/SKILL.md) | Responder Request for Proposal/Quote formal | 🔶 |
-| [`tratamento-objeções`](skills/comercial/tratamento-objeções/SKILL.md) | Tratar objeções comuns de clientes | 🔶 |
+| [`tratamento-objecoes`](skills/comercial/tratamento-objecoes/SKILL.md) | Tratar objeções comuns de clientes | 🔶 |
 | [`atendimento-lead`](skills/comercial/atendimento-lead/SKILL.md) | Triagem e resposta inicial a leads | 🔶 |
 | [`one-pager`](skills/comercial/one-pager/SKILL.md) | Resumo executivo de uma página | ⚪ |
 

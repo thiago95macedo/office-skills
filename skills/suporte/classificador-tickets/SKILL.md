@@ -54,3 +54,19 @@ Classificar tickets por categoria (incidente/solicitação/problema/mudança), p
 ## Possíveis integrações
 - Zendesk
 - Jira Service Management
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para classificar tickets de suporte por categoria, prioridade e produto.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

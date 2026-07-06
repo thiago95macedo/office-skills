@@ -1,0 +1,67 @@
+name: cobranca
+category: financeiro
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - financeiro/prestacao-contas
+  - administrativo/email-corporativo
+
+inputs:
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Nome do cliente.
+  - name: cliente.contato
+    type: string
+    required: true
+    description: Email de contato.
+  - name: fatura.numero
+    type: string
+    required: true
+    description: Numero da fatura.
+  - name: fatura.valor
+    type: number
+    required: true
+    description: Valor da fatura.
+  - name: fatura.vencimento
+    type: date
+    required: true
+    description: Data de vencimento.
+  - name: dias_atraso
+    type: integer
+    required: true
+    description: Dias em atraso.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [amigavel, firme, critico, ultimo_aviso]
+    description: Tom da mensagem.
+  - name: historico
+    type: list
+    required: false
+    description: Historico de acoes anteriores.
+
+outputs:
+  - name: mensagem_markdown
+    type: markdown
+    required: true
+    description: Mensagem de cobranca formatada.
+  - name: proxima_acao
+    type: text
+    required: true
+    description: Proxima acao sugerida.
+  - name: canal_negociacao
+    type: string
+    required: true
+    description: Canal para negociacao.
+
+errors:
+  - code: SEM_FATURA
+    when: dados da fatura incompletos.
+  - code: TOM_INVALIDO
+    when: tom fora dos valores aceitos.

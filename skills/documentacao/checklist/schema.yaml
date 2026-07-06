@@ -1,0 +1,35 @@
+name: checklist
+category: documentacao
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - documentacao/pop-sop
+  - gestao/plano-acao
+
+inputs:
+  - name: finalidade
+    type: string
+    required: true
+    description: Finalidade do checklist.
+  - name: itens
+    type: list
+    required: true
+    description: Lista de itens verificaveis.
+  - name: agrupamento
+    type: object
+    required: false
+    description: Agrupamento opcional dos itens.
+
+outputs:
+  - name: checklist_markdown
+    type: markdown
+    required: true
+    description: Checklist Markdown com checkboxes por categoria.
+
+errors:
+  - code: SEM_FINALIDADE
+    when: finalidade ausente.

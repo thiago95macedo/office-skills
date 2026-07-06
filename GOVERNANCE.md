@@ -2,6 +2,14 @@
 
 Este documento define como a biblioteca é mantida, revisada e evoluída.
 
+## Contato do mantenedor
+
+**Thiago Macêdo**
+E-mail: [contato@thiagomacedo.com.br](mailto:contato@thiagomacedo.com.br)
+Site: [https://www.thiagomacedo.com.br](https://www.thiagomacedo.com.br)
+
+Para questões de segurança, prefira contato direto por e-mail em vez de abrir issue pública.
+
 ## Papéis
 
 | Papel | Responsabilidade |

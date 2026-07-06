@@ -1,0 +1,40 @@
+name: dashboard-executivo
+category: gestao
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - gestao/kpi-okr
+  - produtividade/resumo-executivo
+
+composes_with:
+  - gestao/kpi-okr
+
+inputs:
+  - name: indicadores
+    type: list
+    required: true
+    description: Lista de indicadores com valores atuais e anteriores.
+  - name: periodo
+    type: string
+    required: true
+    description: Periodo de referencia.
+
+outputs:
+  - name: dashboard_markdown
+    type: markdown
+    required: true
+    description: Dashboard com tabela, destaques e alertas.
+  - name: destaques
+    type: list
+    required: true
+    description: Destaques positivos do periodo.
+  - name: alertas
+    type: list
+    required: true
+    description: Alertas que requerem atencao.
+
+errors:
+  - code: SEM_INDICADORES
+    when: indicadores vazio.

@@ -1,0 +1,56 @@
+name: avaliacao-desempenho
+category: rh
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - rh/feedback-constructivo
+
+composes_with:
+  - rh/feedback-constructivo
+  - gestao/kpi-okr
+
+inputs:
+  - name: colaborador.nome
+    type: string
+    required: true
+    description: Nome do colaborador.
+  - name: colaborador.cargo
+    type: string
+    required: true
+    description: Cargo.
+  - name: colaborador.gestor
+    type: string
+    required: true
+    description: Nome do gestor.
+  - name: ciclo
+    type: string
+    required: true
+    description: "Ciclo avaliativo (ex.: 2026-S1)."
+  - name: criterios
+    type: list
+    required: true
+    description: Lista de criterios com peso.
+  - name: autoavaliacao
+    type: list
+    required: true
+    description: Notas por criterio (autoavaliacao).
+  - name: avaliacao_gestor
+    type: list
+    required: true
+    description: Notas por criterio com evidencia.
+
+outputs:
+  - name: avaliacao_markdown
+    type: markdown
+    required: true
+    description: Avaliacao estruturada com notas por criterio.
+  - name: pdi
+    type: markdown
+    required: true
+    description: PDI com metas SMART.
+
+errors:
+  - code: SEM_CRITERIOS
+    when: criterios vazio.

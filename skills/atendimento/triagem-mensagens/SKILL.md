@@ -62,3 +62,15 @@ Classificar mensagens por urgência, tipo, área responsável e próxima ação,
 - CRM
 - Zendesk
 - Front
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para classificar, priorizar e recomendar próxima ação sobre mensagens recebidas em canais diversos.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

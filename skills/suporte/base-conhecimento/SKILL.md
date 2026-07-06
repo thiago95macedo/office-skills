@@ -47,3 +47,23 @@ Estruturar base de conhecimento com taxonomia, donos e ciclo de revisão.
 ## Possíveis integrações
 - Confluence
 - Notion
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para organizar e manter base de conhecimento interna (categorias, donos, ciclo de revisão).
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

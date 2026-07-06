@@ -1,0 +1,41 @@
+name: curador-conteudo
+category: conhecimento
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - produtividade/resumo-executivo
+
+composes_with:
+  - marketing/artigo-blog
+  - suporte/base-conhecimento
+
+inputs:
+  - name: objetivo
+    type: string
+    required: true
+    description: Objetivo da curadoria.
+  - name: fontes
+    type: list
+    required: true
+    description: Lista de fontes a curar.
+  - name: formato_saida
+    type: enum
+    required: true
+    enum_values: [newsletter, briefing, treinamento]
+    description: Formato de saida.
+
+outputs:
+  - name: curadoria_markdown
+    type: markdown
+    required: true
+    description: Lista curada com resumo e recomendacoes.
+  - name: itens_curados
+    type: list
+    required: true
+    description: Itens selecionados.
+  - name: recomendacoes
+    type: list
+    required: true
+    description: Recomendacoes de leitura/uso.

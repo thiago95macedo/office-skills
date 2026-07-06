@@ -53,3 +53,19 @@ Converter texto não estruturado em dados estruturados (JSON/CSV/YAML) conforme 
 ## Possíveis integrações
 - OCR
 - RPA
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para extrair dados estruturados (campos, tabelas, listas) de texto não estruturado.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

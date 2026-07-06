@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://office-skills.local/schemas/skill.schema.json",
+  "title": "Office Skills — Skill Contract Schema",
+  "description": "Schema describing inputs, outputs and dependencies of a Skill. Mirrors frontmatter in SKILL.md.",
+  "type": "object",
+  "required": ["name", "category", "version", "status", "inputs", "outputs"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Kebab-case identifier matching the folder name."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "_core",
+        "comercial",
+        "administrativo",
+        "financeiro",
+        "gestao",
+        "documentacao",
+        "rh",
+        "marketing",
+        "atendimento",
+        "suporte",
+        "produtividade",
+        "conhecimento"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["rascunho", "revisao", "estavel", "deprecada"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["essencial", "recomendada", "opcional"]
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z_]+/[a-z][a-z0-9-]*$"
+      },
+      "description": "Skills whose outputs feed into this Skill."
+    },
+    "composes_with": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z_]+/[a-z][a-z0-9-]*$"
+      },
+      "description": "Skills that consume outputs of this Skill."
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/field" }
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/field" }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "when"],
+        "properties": {
+          "code": { "type": "string" },
+          "when": { "type": "string" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "field": {
+      "type": "object",
+      "required": ["name", "type", "required", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)*$",
+          "description": "Dot-notation path for nested fields (e.g. cliente.nome)."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "string",
+            "text",
+            "number",
+            "integer",
+            "boolean",
+            "date",
+            "enum",
+            "list",
+            "object",
+            "markdown",
+            "yaml",
+            "json"
+          ]
+        },
+        "required": { "type": "boolean" },
+        "description": { "type": "string", "minLength": 5 },
+        "enum_values": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Required when type=enum."
+        },
+        "default": {},
+        "example": {}
+      }
+    }
+  }
+}

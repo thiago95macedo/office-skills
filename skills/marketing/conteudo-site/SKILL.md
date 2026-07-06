@@ -64,3 +64,15 @@ Produzir páginas institucionais completas, prontas para implementação em CMS.
 ## Possíveis integrações
 - WordPress
 - Webflow
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para produzir páginas institucionais (home, sobre, serviços, contato) com SEO básico.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

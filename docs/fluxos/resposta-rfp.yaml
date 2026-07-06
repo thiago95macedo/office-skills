@@ -1,0 +1,83 @@
+name: resposta-rfp
+description: Resposta estruturada a edital/RFP com matriz de atendimento
+version: 0.2.0
+tags:
+  - comercial
+  - rfp
+  - licitacao
+
+inputs:
+  - name: edital_path
+    type: string
+    required: true
+    description: Caminho do edital
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Orgao ou empresa licitante
+
+outputs:
+  - name: matriz_atendimento
+    description: Matriz requisito -> resposta
+  - name: documento_resposta
+    description: Documento completo de resposta
+  - name: proposta_anexa
+    description: Proposta comercial anexa
+
+steps:
+  - id: extrair_requisitos
+    skill: produtividade/extrator-dados
+    input_from:
+      fonte: inputs.edital_path
+      schema_destino: matriz_requisitos
+    output: requisitos_obj
+
+  - id: classificar_anexos
+    skill: conhecimento/classificador-documentos
+    input_from:
+      documentos: requisitos_obj.anexos
+    output: classificacao_anexos
+
+  - id: escopo_tecnico
+    skill: comercial/escopo-tecnico
+    input_from:
+      servico: requisitos_obj.objeto
+    output: escopo
+
+  - id: analise_custos
+    skill: financeiro/analise-custos
+    input_from:
+      escopo: escopo
+    output: custos
+
+  - id: orcamento
+    skill: comercial/orcamento
+    input_from:
+      escopo: escopo
+    output: orcamento
+
+  - id: proposta
+    skill: comercial/proposta-comercial
+    input_from:
+      cliente: inputs.cliente
+      escopo: escopo
+      orcamento: orcamento
+    output: proposta
+
+  - id: resposta_rfp
+    skill: comercial/resposta-rfp
+    input_from:
+      requisitos: requisitos_obj
+      proposta_tecnica: escopo
+      proposta_comercial: proposta
+    output: resposta_final
+
+  - id: oficio_entrega
+    skill: administrativo/oficio-memorando
+    input_from:
+      destinatario: inputs.cliente
+      assunto: "Entrega de resposta a RFP"
+      conteudo: resposta_final.documento_resposta
+    output: oficio
+
+error_policy: abortar

@@ -1,0 +1,66 @@
+name: redator-corporativo
+category: _core
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/configurador-empresa
+
+composes_with:
+  - comercial/proposta-comercial
+  - comercial/orcamento
+  - administrativo/email-corporativo
+  - documentacao/pop-sop
+  - marketing/conteudo-linkedin
+  - marketing/conteudo-site
+  - documentacao/padronizador-textos
+
+inputs:
+  - name: objetivo
+    type: text
+    required: true
+    description: Finalidade do texto a ser produzido ou revisado.
+  - name: publico
+    type: text
+    required: true
+    description: Audiencia que vai consumir o texto.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [formal, semiformal, informal]
+    description: Tom corporativo a ser aplicado.
+  - name: rascunho
+    type: text
+    required: false
+    description: Texto pre-existente para revisao. Se ausente, redigir do zero.
+  - name: restricoes
+    type: object
+    required: false
+    description: Restricoes adicionais (maximo_palavras, termos a evitar).
+  - name: contexto
+    type: text
+    required: false
+    description: Contexto institucional adicional.
+
+outputs:
+  - name: texto
+    type: markdown
+    required: true
+    description: Texto final revisado e pronto para uso.
+  - name: observacoes
+    type: list
+    required: false
+    description: Observacoes pontuais sobre o texto (sugestoes, alertas).
+  - name: alternativas
+    type: list
+    required: false
+    description: Versoes alternativas do texto, quando solicitadas.
+
+errors:
+  - code: TOM_INVALIDO
+    when: tom fora de {formal, semiformal, informal}.
+  - code: SEM_OBJETIVO
+    when: objetivo nao informado.
+  - code: SEM_PUBLICO
+    when: publico nao informado.

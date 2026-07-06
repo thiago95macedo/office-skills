@@ -58,3 +58,19 @@ Estruturar apresentação completa (storyline, slides, mensagens-chave, CTA) pro
 - PowerPoint
 - Google Slides
 - Keynote
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para estruturar apresentações (slides) com storyline claro, slides objetivos e CTA.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

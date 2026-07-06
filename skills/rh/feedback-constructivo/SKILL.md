@@ -60,3 +60,19 @@ Mensagem estruturada em:
 ## Possíveis integrações
 - 1:1 docs
 - Sistema de avaliação
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para estruturar feedbacks individuais objetivos, respeitosos e orientados a desenvolvimento.
+
+## Dependências
+
+Apontar Skills que esta Skill depende.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

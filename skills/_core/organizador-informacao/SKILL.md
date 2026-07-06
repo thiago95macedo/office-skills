@@ -62,3 +62,15 @@ Documento Markdown com seções lógicas, agrupamento por afinidade e eliminaç�
 - Notion
 - Confluence
 - SharePoint
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use quando houver informação dispersa, desorganizada ou redundante que precise virar um documento estruturado (atas, briefings, relatórios, FAQs).
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

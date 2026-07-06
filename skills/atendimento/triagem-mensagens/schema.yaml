@@ -1,0 +1,36 @@
+name: triagem-mensagens
+category: atendimento
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - atendimento/resposta-rapida
+  - atendimento/encaminhamento-interno
+
+inputs:
+  - name: mensagens
+    type: list
+    required: true
+    description: Lista de mensagens a triar.
+  - name: canal
+    type: enum
+    required: true
+    enum_values: [email, whatsapp, chat, formulario]
+    description: Canal de origem.
+  - name: regras_classificacao
+    type: object
+    required: true
+    description: Regras de classificacao por urgencia/tipo.
+
+outputs:
+  - name: triagem_markdown
+    type: markdown
+    required: true
+    description: Tabela com urgencia, tipo, area, SLA, proxima acao.
+  - name: alta_prioridade
+    type: list
+    required: true
+    description: Mensagens de alta prioridade.

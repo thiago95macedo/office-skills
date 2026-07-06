@@ -45,3 +45,23 @@ Inventariar ativos de conhecimento, identificar lacunas e especialistas por dom�
 ## Possíveis integrações
 - Confluence
 - Notion
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para mapear ativos de conhecimento da empresa (documentos, especialistas, bases, ferramentas).
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

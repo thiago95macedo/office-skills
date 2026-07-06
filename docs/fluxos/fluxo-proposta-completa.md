@@ -10,7 +10,7 @@ Entregar uma proposta comercial robusta, com escopo técnico, orçamento, condi�
 3. `financeiro/analise-custos` — decompor custos e sugerir preço.
 4. `comercial/orcamento` — produzir tabela de orçamento.
 5. `comercial/proposta-comercial` — compor documento final.
-6. `comercial/tratamento-objeções` — gerar bloco de FAQ de objeções comuns.
+6. `comercial/tratamento-objecoes` — gerar bloco de FAQ de objeções comuns.
 7. `comercial/one-pager` — produzir resumo executivo de 1 página (anexo).
 
 ## Entradas

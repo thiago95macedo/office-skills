@@ -1,0 +1,44 @@
+name: treinamento-materiais
+category: rh
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - _core/redator-corporativo
+  - documentacao/manual-tecnico
+
+composes_with:
+  - rh/onboarding
+
+inputs:
+  - name: tema
+    type: string
+    required: true
+    description: Tema do treinamento.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+  - name: duracao
+    type: string
+    required: true
+    description: "Duracao total (ex.: 8h)."
+  - name: objetivos_aprendizagem
+    type: list
+    required: true
+    description: Objetivos mensuraveis.
+  - name: conteudo
+    type: object
+    required: true
+    description: Conteudo por modulo.
+  - name: avaliacao
+    type: object
+    required: false
+    description: Avaliacao de aprendizagem.
+
+outputs:
+  - name: materiais_markdown
+    type: markdown
+    required: true
+    description: Conjunto de materiais (roteiro + apostila + exercicios + avaliacao).

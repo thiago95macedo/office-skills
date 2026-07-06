@@ -1,1 +1,0 @@
-Objeção de preço alto.

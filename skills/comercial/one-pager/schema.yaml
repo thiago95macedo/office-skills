@@ -1,0 +1,36 @@
+name: one-pager
+category: comercial
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - marketing/conteudo-site
+  - comercial/proposta-comercial
+
+inputs:
+  - name: assunto
+    type: text
+    required: true
+    description: Assunto do one-pager.
+  - name: publico
+    type: string
+    required: true
+    description: Audiencia-alvo.
+  - name: diferenciais
+    type: list
+    required: true
+    description: Lista de diferenciais a destacar.
+
+outputs:
+  - name: one_pager_markdown
+    type: markdown
+    required: true
+    description: One-pager em Markdown (maximo 500 palavras).
+
+errors:
+  - code: SEM_ASSUNTO
+    when: assunto nao informado.

@@ -63,3 +63,15 @@ Estruturar ciclo avaliativo com critérios objetivos, evidências e plano de des
 ## Possíveis integrações
 - HRIS
 - 9-box de sucessão
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para produzir roteiro completo de avaliação de desempenho (ciclo, critérios, evidências, calibração, PDI).
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

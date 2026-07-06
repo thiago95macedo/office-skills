@@ -1,0 +1,39 @@
+name: gestao-riscos
+category: gestao
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - gestao/plano-acao
+  - gestao/cronograma-projeto
+
+inputs:
+  - name: contexto
+    type: string
+    required: true
+    description: Contexto do projeto/operacao.
+  - name: riscos_iniciais
+    type: list
+    required: false
+    description: Lista inicial de riscos (opcional).
+
+outputs:
+  - name: matriz_riscos_markdown
+    type: markdown
+    required: true
+    description: Matriz com risco, probabilidade, impacto, mitigacao, responsavel.
+  - name: riscos_alto
+    type: list
+    required: true
+    description: Riscos classificados como alto.
+  - name: plano_mitigacao
+    type: markdown
+    required: true
+    description: Plano de mitigacao por risco.
+
+errors:
+  - code: SEM_CONTEXTO
+    when: contexto ausente.

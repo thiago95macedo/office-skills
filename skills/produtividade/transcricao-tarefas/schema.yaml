@@ -1,0 +1,40 @@
+name: transcricao-tarefas
+category: produtividade
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - administrativo/ata-reuniao
+
+composes_with:
+  - gestao/plano-acao
+  - gestao/matriz-5w2h
+
+inputs:
+  - name: transcricao
+    type: text
+    required: true
+    description: Transcricao de audio/video.
+  - name: participantes
+    type: list
+    required: true
+    description: Participantes identificados.
+  - name: contexto
+    type: string
+    required: true
+    description: Contexto da reuniao.
+
+outputs:
+  - name: tarefas_markdown
+    type: markdown
+    required: true
+    description: Lista de tarefas com responsavel, prazo, prioridade.
+  - name: decisoes
+    type: list
+    required: true
+    description: Decisoes registradas.
+  - name: pendencias
+    type: list
+    required: true
+    description: Pendencias em aberto.

@@ -69,3 +69,15 @@ Documentar com transparência e rastreabilidade cada item de despesa de um proje
 - ERP
 - Sistema de reembolso
 - GED
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para documentar uso de recursos em projeto, viagem, evento ou verba corporativa, com rastreabilidade de cada item.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

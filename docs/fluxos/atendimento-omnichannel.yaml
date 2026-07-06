@@ -1,0 +1,59 @@
+name: atendimento-omnichannel
+description: Operacao de caixa multi-canal com triagem, classificacao e resposta
+version: 0.2.0
+tags:
+  - atendimento
+  - suporte
+  - omnichannel
+
+inputs:
+  - name: mensagens
+    type: list
+    required: true
+    description: Lote de mensagens recebidas
+  - name: canal
+    type: enum
+    required: true
+    description: Canal de origem (email, whatsapp, chat)
+
+outputs:
+  - name: triagem
+    description: Tabela de triagem com prioridades
+  - name: tickets
+    description: Tickets abertos
+  - name: respostas_enviadas
+    description: Respostas enviadas
+
+steps:
+  - id: triagem
+    skill: atendimento/triagem-mensagens
+    input_from:
+      mensagens: inputs.mensagens
+      canal: inputs.canal
+    output: triagem_obj
+
+  - id: classificar_tickets
+    skill: suporte/classificador-tickets
+    input_from:
+      descricao: triagem_obj.descricoes
+    output: tickets
+
+  - id: respostas_rapidas
+    skill: atendimento/resposta-rapida
+    input_from:
+      mensagem_original: triagem_obj.respostas_faceis
+    output: respostas_enviadas
+
+  - id: encaminhamentos
+    skill: atendimento/encaminhamento-interno
+    input_from:
+      demanda_original: triagem_obj.demandas_complexas
+    output: encaminhamentos
+
+  - id: consultar_faq
+    skill: suporte/faq-tecnico
+    input_from:
+      produto: triagem_obj.produtos
+    output: faq_referencia
+
+error_policy: continuar

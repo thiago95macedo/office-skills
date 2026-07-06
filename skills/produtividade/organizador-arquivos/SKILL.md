@@ -46,3 +46,23 @@ Propor convenção de nomes, estrutura de pastas e regras de versionamento para 
 ## Possíveis integrações
 - SharePoint
 - Google Drive
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para sugerir estrutura de pastas, nomes de arquivos e regras de versionamento.
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

@@ -68,3 +68,15 @@ Produzir mensagens de cobrança cordiais, firmes e rastreáveis, calibradas pelo
 - ERP financeiro
 - Sistema de boletos
 - CRM
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use quando precisar redigir mensagem de cobrança a cliente inadimplente, preservando o relacionamento e acelerando o pagamento.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

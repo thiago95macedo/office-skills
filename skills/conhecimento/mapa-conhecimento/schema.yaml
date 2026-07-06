@@ -1,0 +1,39 @@
+name: mapa-conhecimento
+category: conhecimento
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - conhecimento/classificador-documentos
+
+composes_with:
+  - suporte/base-conhecimento
+
+inputs:
+  - name: areas
+    type: list
+    required: true
+    description: Areas a mapear.
+  - name: documentos
+    type: list
+    required: true
+    description: Documentos por area.
+  - name: especialistas
+    type: list
+    required: true
+    description: Especialistas por area.
+
+outputs:
+  - name: mapa_markdown
+    type: markdown
+    required: true
+    description: Mapa visual de conhecimento.
+  - name: lacunas
+    type: list
+    required: true
+    description: Lacunas identificadas.
+  - name: riscos
+    type: list
+    required: true
+    description: Riscos de perda de conhecimento.

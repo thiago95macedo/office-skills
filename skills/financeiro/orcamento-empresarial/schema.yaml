@@ -1,0 +1,60 @@
+name: orcamento-empresarial
+category: financeiro
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - gestao/kpi-okr
+  - gestao/dashboard-executivo
+  - financeiro/analise-custos
+
+inputs:
+  - name: periodo
+    type: string
+    required: true
+    description: Periodo do orcamento (mensal, trimestral, anual).
+  - name: receitas_previstas
+    type: object
+    required: true
+    description: Receitas previstas por categoria.
+  - name: despesas_previstas
+    type: object
+    required: true
+    description: Despesas previstas por categoria.
+  - name: investimentos
+    type: object
+    required: true
+    description: Investimentos previstos.
+  - name: realizado
+    type: object
+    required: false
+    description: Valores realizados por categoria.
+  - name: cenarios
+    type: list
+    required: false
+    description: Cenarios alternativos (otimista, realista, pessimista).
+
+outputs:
+  - name: orcamento_markdown
+    type: markdown
+    required: true
+    description: Planilha de orcamento em Markdown.
+  - name: variacoes
+    type: object
+    required: false
+    description: Variacoes percentual por categoria (se realizado fornecido).
+  - name: alertas
+    type: list
+    required: true
+    description: Alertas sobre desvios relevantes.
+  - name: premissas
+    type: list
+    required: true
+    description: Premissas e riscos declarados.
+
+errors:
+  - code: SEM_PERIODO
+    when: periodo nao informado.

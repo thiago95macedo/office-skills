@@ -65,3 +65,15 @@ Criar posts para LinkedIn com gancho inicial atrativo, desenvolvimento curto, ex
 ## Possíveis integrações
 - LinkedIn Scheduler
 - Buffer
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para produzir posts profissionais para LinkedIn com ganchos, estrutura narrativa e CTA, respeitando o tom corporativo.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

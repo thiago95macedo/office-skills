@@ -1,0 +1,32 @@
+name: classificador-documentos
+category: conhecimento
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - documentacao/organizador-documental
+  - produtividade/extrator-dados
+
+inputs:
+  - name: documentos
+    type: list
+    required: true
+    description: Lista de documentos a classificar.
+  - name: taxonomia
+    type: object
+    required: true
+    description: Taxonomia alvo.
+  - name: saida_desejada
+    type: enum
+    required: true
+    enum_values: [tags, caminho, both]
+    description: Tipo de saida desejada.
+
+outputs:
+  - name: classificacao_markdown
+    type: markdown
+    required: true
+    description: Lista classificada com tipo, tags, caminho sugerido.

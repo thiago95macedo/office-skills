@@ -1,0 +1,46 @@
+name: plano-acao
+category: gestao
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - gestao/matriz-5w2h
+  - gestao/cronograma-projeto
+  - gestao/kpi-okr
+
+inputs:
+  - name: objetivo
+    type: string
+    required: true
+    description: Objetivo do plano.
+  - name: acoes
+    type: list
+    required: true
+    description: Lista de acoes (verbos no infinitivo).
+  - name: responsaveis
+    type: list
+    required: true
+    description: Lista de responsaveis nominais.
+  - name: prazos
+    type: list
+    required: true
+    description: Lista de prazos (datas ou duracao).
+  - name: indicadores
+    type: list
+    required: true
+    description: Indicadores de sucesso por acao.
+
+outputs:
+  - name: plano_markdown
+    type: markdown
+    required: true
+    description: Tabela com 5 colunas (acao, responsavel, prazo, entrega, indicador).
+
+errors:
+  - code: SEM_OBJETIVO
+    when: objetivo nao informado.
+  - code: ACOES_VAZIAS
+    when: acoes vazia.

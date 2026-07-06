@@ -1,3 +1,39 @@
-1. Aprovação confirmada.
-2. Resultados quantificados.
-3. Linguagem sóbria.
+# Casos de teste — marketing/case-de-sucesso
+
+Descricao: Use para estruturar cases de sucesso a partir de resultados reais do cliente.
+
+Casos minimos verificaveis para garantir que a Skill cumpre o que promete.
+
+## Caso 1 — Cenario 1
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 2 — Cenario 2
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 3 — Cenario 3
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+

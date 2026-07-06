@@ -1,0 +1,40 @@
+name: extrator-dados
+category: produtividade
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - produtividade/analise-planilha
+  - conhecimento/classificador-documentos
+
+inputs:
+  - name: fonte
+    type: text
+    required: true
+    description: Texto fonte nao estruturado.
+  - name: schema_destino
+    type: object
+    required: true
+    description: Schema dos campos a extrair.
+  - name: politica_ambiguo
+    type: enum
+    required: true
+    enum_values: [perguntar, inferir, descartar]
+    description: Tratamento de ambiguidades.
+
+outputs:
+  - name: dados_extraidos
+    type: yaml
+    required: true
+    description: Lista de objetos no schema.
+  - name: excecoes
+    type: list
+    required: true
+    description: Itens nao mapeados.
+  - name: confianca_media
+    type: number
+    required: false
+    description: Confianca media por campo (0-1).

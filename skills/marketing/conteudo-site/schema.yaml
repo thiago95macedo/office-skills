@@ -1,0 +1,41 @@
+name: conteudo-site
+category: marketing
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - marketing/conteudo-linkedin
+  - marketing/artigo-blog
+
+inputs:
+  - name: pagina
+    type: enum
+    required: true
+    enum_values: [home, sobre, servicos, contato]
+    description: Tipo de pagina.
+  - name: tema
+    type: string
+    required: true
+    description: Tema da pagina.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+  - name: seo_keywords
+    type: list
+    required: true
+    description: Keywords SEO.
+  - name: cta_principal
+    type: string
+    required: true
+    description: CTA principal.
+
+outputs:
+  - name: pagina_markdown
+    type: markdown
+    required: true
+    description: Conteudo da pagina com H1, H2, meta description.

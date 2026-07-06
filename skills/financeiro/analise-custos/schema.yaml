@@ -1,0 +1,73 @@
+name: analise-custos
+category: financeiro
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - comercial/orcamento
+  - comercial/proposta-comercial
+  - financeiro/justificativa-financeira
+  - financeiro/orcamento-empresarial
+
+inputs:
+  - name: itens_custo
+    type: list
+    required: true
+    description: Itens de custo direto.
+  - name: custos_indiretos
+    type: object
+    required: true
+    description: Rateio de custos fixos.
+  - name: margem_desejada
+    type: number
+    required: true
+    description: Margem alvo em percentual.
+  - name: impostos
+    type: object
+    required: false
+    description: Aliquotas por tributo.
+  - name: concorrencia
+    type: list
+    required: false
+    description: Precos medios de mercado.
+  - name: cenario
+    type: enum
+    required: false
+    enum_values: [conservador, base, agressivo]
+    default: base
+    description: Cenario-alvo do calculo.
+
+outputs:
+  - name: tabela_decomposicao
+    type: markdown
+    required: true
+    description: Tabela com decomposicao de custos.
+  - name: subtotal
+    type: number
+    required: true
+    description: Subtotal em moeda local.
+  - name: total_impostos
+    type: number
+    required: true
+    description: Total de impostos.
+  - name: preco_sugerido_base
+    type: number
+    required: true
+    description: Preco de venda sugerido (cenario base).
+  - name: cenarios
+    type: object
+    required: true
+    description: Precos para cada cenario (conservador, base, agressivo).
+  - name: premissas
+    type: list
+    required: true
+    description: Premissas declaradas.
+
+errors:
+  - code: SEM_ITENS
+    when: itens_custo vazio.
+  - code: MARGEM_INVALIDA
+    when: margem_desejada <= 0 ou >= 100.

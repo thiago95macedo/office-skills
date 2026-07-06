@@ -49,3 +49,23 @@ Traduzir textos mantendo terminologia técnica, tom corporativo e estilo da empr
 ## Possíveis integrações
 - CAT tools
 - TMS
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para traduzir textos preservando tom corporativo, terminologia técnica e estilo.
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

@@ -1,0 +1,34 @@
+name: carta-corporativa
+category: administrativo
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with: []
+
+inputs:
+  - name: finalidade
+    type: string
+    required: true
+    description: Finalidade da carta.
+  - name: destinatario
+    type: object
+    required: true
+    description: Dados do destinatario.
+  - name: conteudo
+    type: text
+    required: true
+    description: Conteudo da carta.
+
+outputs:
+  - name: carta_markdown
+    type: markdown
+    required: true
+    description: Carta formal em Markdown.
+
+errors:
+  - code: SEM_FINALIDADE
+    when: finalidade ausente.

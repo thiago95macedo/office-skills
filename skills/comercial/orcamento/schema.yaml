@@ -1,0 +1,54 @@
+name: orcamento
+category: comercial
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - comercial/escopo-tecnico
+
+composes_with:
+  - comercial/proposta-comercial
+  - financeiro/analise-custos
+
+inputs:
+  - name: escopo
+    type: object
+    required: true
+    description: Escopo definido (output de comercial/escopo-tecnico).
+  - name: tabela_precos
+    type: object
+    required: true
+    description: Tabela de precos vigente.
+  - name: impostos
+    type: object
+    required: false
+    description: Aliquotas por tributo.
+  - name: condicoes_pagamento
+    type: object
+    required: true
+    description: Forma e prazos de pagamento.
+
+outputs:
+  - name: orcamento_tabela
+    type: markdown
+    required: true
+    description: Tabela Markdown com itens, valores, totais.
+  - name: subtotal
+    type: number
+    required: true
+    description: Subtotal em moeda local.
+  - name: total_geral
+    type: number
+    required: true
+    description: Total geral com impostos.
+  - name: itens_opcionais
+    type: list
+    required: false
+    description: Itens marcados como opcionais no orcamento.
+
+errors:
+  - code: SEM_ESCOPO
+    when: escopo nao informado.
+  - code: SEM_TABELA
+    when: tabela_precos nao informada.

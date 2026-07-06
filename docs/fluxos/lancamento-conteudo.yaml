@@ -1,0 +1,73 @@
+name: lancamento-conteudo
+description: Lancamento multicanal de conteudo editorial
+version: 0.2.0
+tags:
+  - marketing
+  - conteudo
+  - multicanal
+
+inputs:
+  - name: tema_central
+    type: string
+    required: true
+    description: Tema do lancamento
+  - name: keywords_seo
+    type: list
+    required: true
+    description: Keywords SEO
+  - name: canais
+    type: list
+    required: true
+    description: Canais de divulgacao
+
+outputs:
+  - name: artigo_pilar
+    description: Artigo-pilar
+  - name: posts_linkedin
+    description: Posts LinkedIn
+  - name: landing_page
+    description: Landing page
+  - name: sequencia_email
+    description: Sequencia de e-mails
+  - name: slides_internos
+    description: Apresentacao interna
+
+steps:
+  - id: artigo
+    skill: marketing/artigo-blog
+    input_from:
+      tema: inputs.tema_central
+      keywords: inputs.keywords_seo
+    output: artigo
+
+  - id: posts
+    skill: marketing/conteudo-linkedin
+    input_from:
+      tema: inputs.tema_central
+    output: posts_linkedin
+
+  - id: landing
+    skill: marketing/conteudo-site
+    input_from:
+      tema: inputs.tema_central
+    output: landing
+
+  - id: emails
+    skill: marketing/campanha-email
+    input_from:
+      objetivo: "Divulgar lancamento"
+    output: sequencia
+
+  - id: slides
+    skill: produtividade/gerador-apresentacao
+    input_from:
+      objetivo: "Alinhar times sobre lancamento"
+    output: slides_internos
+
+  - id: briefing
+    skill: _core/organizador-informacao
+    input_from:
+      fontes: todas_saidas_anteriores
+    output: briefing_consolidado
+
+error_policy: abortar

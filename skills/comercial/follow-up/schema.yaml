@@ -1,0 +1,46 @@
+name: follow-up
+category: comercial
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - comercial/atendimento-lead
+
+inputs:
+  - name: contexto_interacao
+    type: text
+    required: true
+    description: Contexto da ultima interacao.
+  - name: tipo_followup
+    type: enum
+    required: true
+    enum_values: [reuniao, proposta, negociacao, introducao]
+    description: Tipo do follow-up.
+  - name: proximo_passo_desejado
+    type: text
+    required: true
+    description: Acao objetivo desejada.
+  - name: canal
+    type: enum
+    required: false
+    enum_values: [email, linkedin, whatsapp, telefone]
+    default: email
+    description: Canal de envio.
+
+outputs:
+  - name: mensagem
+    type: text
+    required: true
+    description: Mensagem de follow-up pronta para envio.
+  - name: cta
+    type: text
+    required: true
+    description: Call to action explicito.
+
+errors:
+  - code: SEM_CONTEXTO
+    when: contexto_interacao ausente.

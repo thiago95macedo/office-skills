@@ -1,0 +1,48 @@
+name: feedback-constructivo
+category: rh
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - rh/avaliacao-desempenho
+  - rh/onboarding
+
+inputs:
+  - name: colaborador
+    type: string
+    required: true
+    description: Nome do colaborador.
+  - name: contexto
+    type: string
+    required: true
+    description: Contexto do feedback.
+  - name: comportamento_observado
+    type: string
+    required: true
+    description: Comportamento observado (fato, nao julgamento).
+  - name: impacto
+    type: string
+    required: true
+    description: Impacto do comportamento.
+  - name: tipo
+    type: enum
+    required: true
+    enum_values: [corretivo, reconhecimento, orientacao]
+    description: Tipo do feedback.
+  - name: proximo_passo
+    type: string
+    required: true
+    description: Proximo passo combinado.
+
+outputs:
+  - name: feedback_markdown
+    type: markdown
+    required: true
+    description: Feedback em 5 blocos (contexto, comportamento, impacto, proximo passo, apoio).
+
+errors:
+  - code: SEM_COMPORTAMENTO
+    when: comportamento_observado ausente.

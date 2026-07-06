@@ -44,3 +44,23 @@ Construir FAQ técnico com perguntas frequentes, respostas precisas e referênci
 ## Possíveis integrações
 - Zendesk Guide
 - Notion
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para construir FAQ técnico sobre produtos/serviços com respostas verificáveis.
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

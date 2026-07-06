@@ -1,0 +1,89 @@
+name: proposta-completa
+description: Resposta completa a RFP ou pedido formal de proposta comercial
+version: 0.2.0
+tags:
+  - comercial
+  - venda
+  - rfp
+
+inputs:
+  - name: cliente.nome
+    type: string
+    required: true
+    description: Nome do cliente
+  - name: cliente.contato
+    type: string
+    required: true
+    description: Email ou telefone do contato
+  - name: servico
+    type: text
+    required: true
+    description: Descricao do servico solicitado
+  - name: prazo_desejado
+    type: string
+    required: false
+    description: Prazo desejado pelo cliente
+  - name: orcamento_alvo
+    type: number
+    required: false
+    description: Orcamento-alvo do cliente (se informado)
+
+outputs:
+  - name: proposta
+    description: Proposta comercial completa
+  - name: orcamento
+    description: Tabela de orcamento
+  - name: escopo
+    description: Escopo tecnico
+  - name: faq_objecoes
+    description: FAQ de objecoes comuns
+
+steps:
+  - id: contexto
+    skill: _core/configurador-empresa
+    input:
+      caminho_config: config/empresa.yaml
+    output: contexto
+
+  - id: escopo
+    skill: comercial/escopo-tecnico
+    input_from:
+      servico: inputs.servico
+      prazo_desejado: inputs.prazo_desejado
+    output: escopo_obj
+
+  - id: custos
+    skill: financeiro/analise-custos
+    input_from:
+      escopo: escopo_obj.escopo_markdown
+    output: custos_obj
+
+  - id: orcamento
+    skill: comercial/orcamento
+    input_from:
+      escopo: escopo_obj
+      tabela_precos: contexto.tabela_precos
+    output: orcamento_obj
+
+  - id: proposta
+    skill: comercial/proposta-comercial
+    input_from:
+      cliente: inputs.cliente
+      escopo: escopo_obj
+      orcamento: orcamento_obj
+      condicoes_comerciais: contexto.condicoes
+    output: proposta_obj
+
+  - id: objecoes
+    skill: comercial/tratamento-objecoes
+    input_from:
+      objecao: inputs.objecao_inicial
+    output: objecoes_obj
+
+  - id: resumo
+    skill: comercial/one-pager
+    input_from:
+      assunto: proposta_obj.proposta_markdown
+    output: one_pager
+
+error_policy: abortar

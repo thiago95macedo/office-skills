@@ -1,3 +1,39 @@
-1. Classificação coerente com contexto.
-2. Resposta cordial.
-3. Próxima ação objetiva.
+# Casos de teste — comercial/atendimento-lead
+
+Descricao: Use para triagem e resposta inicial a leads vindos de canais diversos (site, LinkedIn, indicação).
+
+Casos minimos verificaveis para garantir que a Skill cumpre o que promete.
+
+## Caso 1 — Cenario 1
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 2 — Cenario 2
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 3 — Cenario 3
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+

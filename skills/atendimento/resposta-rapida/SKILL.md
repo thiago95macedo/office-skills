@@ -23,7 +23,7 @@ Produzir respostas curtas (até 80 palavras), cordiais e úteis, com CTA claro.
 
 ## Quando NÃO usar
 - Para respostas técnicas detalhadas.
-- Para respostas comtemplando objeções (usar `comercial/tratamento-objeções`).
+- Para respostas comtemplando objeções (usar `comercial/tratamento-objecoes`).
 
 ## Entradas esperadas
 | Campo | Tipo | Obrigatório |
@@ -51,3 +51,19 @@ Mensagem curta (até 80 palavras), cordial, com CTA.
 ## Possíveis integrações
 - Zendesk Macro
 - Freshdesk
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para gerar resposta curta, cordial e útil a demandas de atendimento.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

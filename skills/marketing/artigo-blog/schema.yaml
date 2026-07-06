@@ -1,0 +1,45 @@
+name: artigo-blog
+category: marketing
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - marketing/conteudo-site
+  - marketing/conteudo-linkedin
+
+inputs:
+  - name: tema
+    type: string
+    required: true
+    description: Tema do artigo.
+  - name: keywords
+    type: list
+    required: true
+    description: Keywords SEO.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+  - name: extensao
+    type: enum
+    required: true
+    enum_values: [curto, medio, longo]
+    description: Extensao desejada.
+  - name: cta
+    type: string
+    required: true
+    description: CTA final.
+
+outputs:
+  - name: artigo_markdown
+    type: markdown
+    required: true
+    description: Artigo completo com H1, H2, H3.
+  - name: meta_descricao
+    type: string
+    required: true
+    description: Meta description para SEO.

@@ -2,6 +2,10 @@
 
 Este documento registra as decisões arquiteturais (ADRs) da biblioteca Office Skills. Cada decisão tem identificação, contexto, consequência e trade-offs.
 
+## Contato do mantenedor
+
+**Thiago Macêdo** — [contato@thiagomacedo.com.br](mailto:contato@thiagomacedo.com.br) — [https://www.thiagomacedo.com.br](https://www.thiagomacedo.com.br)
+
 ## ADR-001 — Skills como unidades mínimas
 
 **Decisão:** Cada Skill é a menor unidade funcional. Não existem sub-Skills públicas.
@@ -99,7 +103,7 @@ produtividade/extrator-dados ────> financeiro/analise-custos
                                 ─> gestao/dashboard-kpi
 
 comercial/proposta-comercial ────> comercial/orcamento
-                                ─> comercial/tratamento-objeções
+                                ─> comercial/tratamento-objecoes
 ```
 
 ## Roadmap arquitetural

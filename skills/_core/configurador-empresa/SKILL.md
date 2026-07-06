@@ -56,3 +56,15 @@ Dicionário de configuração validado, pronto para uso.
 - Vault
 - AWS Secrets Manager
 - Variáveis de ambiente
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para carregar variáveis de personalização da empresa (tom, vocabulário, dados de contato, assinatura) consumidas pelas demais Skills.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

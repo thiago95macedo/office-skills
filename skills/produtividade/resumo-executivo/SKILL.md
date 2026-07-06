@@ -57,3 +57,19 @@ Sintetizar documentos longos em resumo executivo de 1 página, destacando conclu
 ## Possíveis integrações
 - PDF readers
 - Notion
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para produzir resumo executivo de documento longo (relatório, ata, proposta, estudo) com foco em decisões e números.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

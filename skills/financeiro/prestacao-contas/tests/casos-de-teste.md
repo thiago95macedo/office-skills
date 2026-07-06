@@ -1,4 +1,39 @@
-1. Itens numerados.
-2. NF/recibo citado por item.
-3. Total confere com soma dos itens.
-4. Itens sem NF sinalizados.
+# Casos de teste — financeiro/prestacao-contas
+
+Descricao: Use para documentar uso de recursos em projeto, viagem, evento ou verba corporativa, com rastreabilidade de cada item.
+
+Casos minimos verificaveis para garantir que a Skill cumpre o que promete.
+
+## Caso 1 — Cenario 1
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 2 — Cenario 2
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 3 — Cenario 3
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+

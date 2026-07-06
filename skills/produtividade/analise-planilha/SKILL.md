@@ -59,3 +59,19 @@ Analisar dados tabulares e produzir descrição compreensiva com estatísticas, 
 - Excel
 - Google Sheets
 - Power BI
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para analisar planilhas (CSV, Excel) e produzir descrição de dados, tendências, outliers e insights.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

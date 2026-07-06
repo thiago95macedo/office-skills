@@ -62,3 +62,15 @@ Produzir materiais didáticos completos para treinamentos internos, com teoria, 
 - LMS
 - PowerPoint
 - Google Slides
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para produzir materiais de treinamento (apostila, roteiro, exercícios, avaliação).
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

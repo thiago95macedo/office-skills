@@ -1,0 +1,51 @@
+name: resposta-rfp
+category: comercial
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - comercial/proposta-comercial
+  - comercial/escopo-tecnico
+  - comercial/orcamento
+
+composes_with:
+  - comercial/tratamento-objecoes
+
+inputs:
+  - name: requisitos_edital
+    type: list
+    required: true
+    description: Lista de requisitos do edital.
+  - name: proposta_tecnica
+    type: object
+    required: true
+    description: Proposta tecnica detalhada.
+  - name: proposta_comercial
+    type: object
+    required: true
+    description: Proposta comercial.
+  - name: documentos_exigidos
+    type: list
+    required: false
+    description: Documentos exigidos pelo edital.
+
+outputs:
+  - name: matriz_atendimento
+    type: markdown
+    required: true
+    description: Matriz requisito -> resposta.
+  - name: documento_resposta
+    type: markdown
+    required: true
+    description: Documento completo de resposta.
+  - name: anexos_referenciados
+    type: list
+    required: false
+    description: Lista de anexos referenciados.
+
+errors:
+  - code: SEM_REQUISITOS
+    when: requisitos_edital vazio.
+  - code: REQUISITO_NAO_ATENDIDO
+    when: algum requisito nao tem resposta na matriz.

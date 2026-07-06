@@ -1,0 +1,30 @@
+{
+  "name": "office-skills",
+  "description": "Biblioteca corporativa de Skills (60 Skills em 12 dominios) para automacao administrativa, comercial, tecnica e gerencial. Estrutura padronizada com SKILL.md, prompt.md, examples/, templates/ e tests/ para cada Skill. Configuravel por empresa via config/empresa.yaml.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Thiago Macedo",
+    "email": "contato@thiagomacedo.com.br",
+    "url": "https://www.thiagomacedo.com.br"
+  },
+  "homepage": "https://github.com/office-skills/office-skills",
+  "repository": "https://github.com/office-skills/office-skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "corporate",
+    "business",
+    "productivity",
+    "commercial",
+    "administrative",
+    "finance",
+    "management",
+    "documentation",
+    "hr",
+    "marketing",
+    "support",
+    "automation",
+    "workflows",
+    "prompts"
+  ]
+}

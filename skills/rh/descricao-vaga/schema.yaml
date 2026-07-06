@@ -1,0 +1,63 @@
+name: descricao-vaga
+category: rh
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - rh/treinamento-materiais
+  - marketing/conteudo-linkedin
+
+inputs:
+  - name: cargo
+    type: string
+    required: true
+    description: Titulo do cargo.
+  - name: area
+    type: string
+    required: true
+    description: Area/departamento.
+  - name: reporta_para
+    type: string
+    required: true
+    description: Cargo superior.
+  - name: missao
+    type: string
+    required: true
+    description: Missao do cargo.
+  - name: responsabilidades
+    type: list
+    required: true
+    description: Lista de responsabilidades.
+  - name: requisitos_obrigatorios
+    type: list
+    required: true
+    description: Requisitos obrigatorios.
+  - name: requisitos_diferenciais
+    type: list
+    required: false
+    description: Requisitos diferenciais.
+  - name: beneficios
+    type: list
+    required: true
+    description: Beneficios oferecidos.
+  - name: modelo_trabalho
+    type: enum
+    required: true
+    enum_values: [presencial, hibrido, remoto]
+    description: Modelo de trabalho.
+
+outputs:
+  - name: descricao_markdown
+    type: markdown
+    required: true
+    description: Descricao da vaga formatada.
+
+errors:
+  - code: SEM_CARGO
+    when: cargo ausente.
+  - code: SEM_RESPONSABILIDADES
+    when: responsabilidades vazia.

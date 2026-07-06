@@ -1,0 +1,63 @@
+name: onboarding-colaborador
+description: Integracao estruturada de novo colaborador em 30/60/90 dias
+version: 0.2.0
+tags:
+  - rh
+  - onboarding
+  - colaborador
+
+inputs:
+  - name: colaborador.nome
+    type: string
+    required: true
+    description: Nome do colaborador
+  - name: colaborador.data_inicio
+    type: date
+    required: true
+    description: Data de inicio
+  - name: cargo
+    type: string
+    required: true
+    description: Cargo do colaborador
+  - name: gestor
+    type: string
+    required: true
+    description: Gestor responsavel
+
+outputs:
+  - name: comunicado_chegada
+    description: Comunicado interno de chegada
+  - name: plano_integracao
+    description: Plano 30/60/90
+  - name: trilha_capacitacao
+    description: Trilha de treinamentos
+
+steps:
+  - id: comunicado_chegada
+    skill: administrativo/comunicado-interno
+    input_from:
+      mensagem_central: "Bem-vindo novo colaborador"
+    output: comunicado
+
+  - id: plano_integracao
+    skill: rh/onboarding
+    input_from:
+      colaborador: inputs.colaborador
+      cargo: inputs.cargo
+      gestor: inputs.gestor
+    output: plano_30_60_90
+
+  - id: trilha_capacitacao
+    skill: rh/treinamento-materiais
+    input_from:
+      tema: inputs.cargo
+    output: materiais
+
+  - id: check_ins
+    skill: rh/feedback-constructivo
+    input_from:
+      colaborador: inputs.colaborador
+      tipo: orientacao
+    output: check_in_agendado
+
+error_policy: abortar

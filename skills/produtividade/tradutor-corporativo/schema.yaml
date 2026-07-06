@@ -1,0 +1,41 @@
+name: tradutor-corporativo
+category: produtividade
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - marketing/artigo-blog
+  - marketing/conteudo-site
+
+inputs:
+  - name: texto_origem
+    type: text
+    required: true
+    description: Texto de origem.
+  - name: idioma_destino
+    type: string
+    required: true
+    description: Idioma destino (ISO 639-1).
+  - name: glossario
+    type: object
+    required: true
+    description: Glossario de termos tecnicos.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [formal, semiformal, informal]
+    description: Tom desejado.
+
+outputs:
+  - name: texto_traduzido
+    type: markdown
+    required: true
+    description: Texto traduzido.
+  - name: notas_traducao
+    type: list
+    required: false
+    description: Notas sobre decisoes de traducao.

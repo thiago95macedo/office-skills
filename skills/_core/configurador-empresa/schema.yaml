@@ -1,0 +1,51 @@
+name: configurador-empresa
+category: _core
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - _core/redator-corporativo
+  - comercial/proposta-comercial
+  - comercial/escopo-tecnico
+  - administrativo/email-corporativo
+  - documentacao/padronizador-textos
+  - administrativo/comunicado-interno
+  - marketing/conteudo-linkedin
+
+inputs:
+  - name: caminho_config
+    type: string
+    required: true
+    description: Caminho do arquivo YAML de configuracao da empresa.
+  - name: override
+    type: object
+    required: false
+    description: Sobreposicoes em runtime (tom, vocabulario_bloqueado, etc.).
+
+outputs:
+  - name: empresa
+    type: object
+    required: true
+    description: Dicionario de configuracao validado.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [formal, semiformal, informal]
+    description: Tom resolvido (override ou valor da config).
+  - name: vocabulario_bloqueado
+    type: list
+    required: true
+    description: Lista de termos proibidos apos merge de override.
+  - name: assinatura_padrao
+    type: text
+    required: false
+    description: Assinatura corporativa configurada.
+
+errors:
+  - code: ARQUIVO_INEXISTENTE
+    when: caminho_config nao aponta para arquivo valido.
+  - code: CAMPOS_OBRIGATORIOS_AUSENTES
+    when: config nao contem empresa.nome ou empresa.tom.

@@ -1,0 +1,56 @@
+name: onboarding
+category: rh
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - gestao/plano-acao
+
+composes_with:
+  - rh/descricao-vaga
+  - rh/treinamento-materiais
+
+inputs:
+  - name: colaborador.nome
+    type: string
+    required: true
+    description: Nome do colaborador.
+  - name: colaborador.data_inicio
+    type: date
+    required: true
+    description: Data de inicio.
+  - name: cargo
+    type: string
+    required: true
+    description: Cargo.
+  - name: gestor
+    type: string
+    required: true
+    description: Nome do gestor.
+  - name: trilha_conhecimento
+    type: list
+    required: true
+    description: Lista de treinamentos.
+  - name: marcos_personalizados
+    type: object
+    required: false
+    description: Marcos customizados (alem dos 30/60/90).
+
+outputs:
+  - name: plano_markdown
+    type: markdown
+    required: true
+    description: Plano de onboarding com marcos 30/60/90.
+  - name: trilha_markdown
+    type: markdown
+    required: true
+    description: Trilha de treinamentos.
+  - name: checkins
+    type: list
+    required: true
+    description: Datas de check-in agendados.
+
+errors:
+  - code: SEM_COLABORADOR
+    when: dados do colaborador incompletos.

@@ -1,3 +1,39 @@
-1. Cálculo de subtotal e total correto.
-2. Impostos destacados.
-3. Itens opcionais claramente marcados.
+# Casos de teste — comercial/orcamento
+
+Descricao: Use para gerar orçamento detalhado (itens, quantidades, valores unitários, totais, condições de pagamento) a partir de um escopo.
+
+Casos minimos verificaveis para garantir que a Skill cumpre o que promete.
+
+## Caso 1 — Cenario 1
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 2 — Cenario 2
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+
+## Caso 3 — Cenario 3
+
+**Entrada:** dados representativos do cenario.
+
+**Esperado:** a Skill produz artefato coerente com o objetivo, respeitando tom, vocabulario e schema.
+
+**Criterios verificaveis:**
+- Saida contem os campos declarados em `schema.yaml`.
+- Tom configurado foi aplicado.
+- Nenhum item do vocabulario bloqueado foi usado.
+

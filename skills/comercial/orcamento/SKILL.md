@@ -42,3 +42,35 @@ Tabela de itens, subtotal, impostos, total geral, condições.
 
 ## Limitações
 - Não consulta tabelas tributárias em tempo real.
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para gerar orçamento detalhado (itens, quantidades, valores unitários, totais, condições de pagamento) a partir de um escopo.
+
+## Entradas esperadas
+
+Documentar campos, tipos e obrigatoriedade.
+
+## Saídas esperadas
+
+Documentar artefatos produzidos pela Skill.
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Dependências
+
+Apontar Skills que esta Skill depende.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+
+## Possíveis integrações
+
+Listar integracoes com sistemas externos.
+

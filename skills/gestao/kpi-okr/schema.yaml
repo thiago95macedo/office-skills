@@ -1,0 +1,43 @@
+name: kpi-okr
+category: gestao
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - gestao/dashboard-executivo
+  - gestao/plano-acao
+
+inputs:
+  - name: objetivo_estrategico
+    type: string
+    required: true
+    description: Objetivo estrategico de alto nivel.
+  - name: metas_trimestrais
+    type: list
+    required: true
+    description: Metas para o trimestre/ciclo.
+  - name: indicadores
+    type: list
+    required: true
+    description: Indicadores operacionais (KPIs).
+  - name: area
+    type: string
+    required: false
+    description: "Area ou escopo (default: organizacao)."
+
+outputs:
+  - name: kpis_markdown
+    type: markdown
+    required: true
+    description: Tabela de KPIs com formula, meta e frequencia.
+  - name: okrs_markdown
+    type: markdown
+    required: true
+    description: Tabela de OKRs com KRs mensuraveis.
+
+errors:
+  - code: SEM_OBJETIVO
+    when: objetivo_estrategico ausente.

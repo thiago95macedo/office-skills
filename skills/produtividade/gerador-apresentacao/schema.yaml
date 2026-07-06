@@ -1,0 +1,44 @@
+name: gerador-apresentacao
+category: produtividade
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - produtividade/resumo-executivo
+  - comercial/proposta-comercial
+
+inputs:
+  - name: objetivo
+    type: string
+    required: true
+    description: Objetivo da apresentacao.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+  - name: duracao_minutos
+    type: integer
+    required: true
+    description: Duracao em minutos.
+  - name: mensagens_chave
+    type: list
+    required: true
+    description: Mensagens-chave a transmitir.
+  - name: cta
+    type: string
+    required: true
+    description: CTA final.
+
+outputs:
+  - name: apresentacao_markdown
+    type: markdown
+    required: true
+    description: Storyline + slides com titulo, mensagem, visual sugerido.
+  - name: storyline
+    type: string
+    required: true
+    description: Narrativa da apresentacao.

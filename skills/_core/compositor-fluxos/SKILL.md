@@ -46,3 +46,27 @@ Permitir composição ordenada de Skills, transformando a saída de uma Skill na
 ## Limitações
 - Não gerencia execução paralela (a menos que explicitamente configurado).
 - Não retém estado entre execuções.
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para encadear várias Skills em um fluxo ordenado, com transferência explícita de saídas como entradas.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Dependências
+
+Apontar Skills que esta Skill depende.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+
+## Possíveis integrações
+
+Listar integracoes com sistemas externos.
+

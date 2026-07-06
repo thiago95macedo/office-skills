@@ -1,0 +1,62 @@
+name: escopo-tecnico
+category: comercial
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - comercial/orcamento
+  - comercial/proposta-comercial
+
+inputs:
+  - name: servico
+    type: text
+    required: true
+    description: Descricao resumida do servico.
+  - name: atividades
+    type: list
+    required: true
+    description: Lista de atividades (verbos no infinitivo).
+  - name: entregas
+    type: list
+    required: true
+    description: Lista de entregas esperadas.
+  - name: premissas
+    type: list
+    required: true
+    description: Premissas que afetam o servico.
+  - name: exclusoes
+    type: list
+    required: true
+    description: Itens explicitamente fora do escopo.
+  - name: responsabilidades_cliente
+    type: list
+    required: false
+    description: Responsabilidades atribuidas ao cliente.
+
+outputs:
+  - name: escopo_markdown
+    type: markdown
+    required: true
+    description: Documento de escopo estruturado.
+  - name: servico
+    type: text
+    required: true
+    description: Eco do servico declarado.
+  - name: atividades
+    type: list
+    required: true
+    description: Lista de atividades validadas.
+  - name: entregas
+    type: list
+    required: true
+    description: Lista de entregas.
+
+errors:
+  - code: SEM_SERVICO
+    when: servico nao informado.
+  - code: SEM_ATIVIDADES
+    when: atividades vazia.

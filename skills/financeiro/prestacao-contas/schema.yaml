@@ -1,0 +1,62 @@
+name: prestacao-contas
+category: financeiro
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - financeiro/cobranca
+  - gestao/plano-acao
+
+inputs:
+  - name: periodo
+    type: string
+    required: true
+    description: Periodo da prestacao.
+  - name: responsavel
+    type: string
+    required: true
+    description: Responsavel pela prestacao.
+  - name: centro_custo
+    type: string
+    required: true
+    description: Codigo do centro de custo.
+  - name: itens
+    type: list
+    required: true
+    description: Lista de itens de despesa.
+  - name: valor_total_recebido
+    type: number
+    required: true
+    description: Valor total recebido.
+  - name: valor_total_gasto
+    type: number
+    required: true
+    description: Valor total gasto.
+  - name: saldo
+    type: number
+    required: true
+    description: Saldo (a devolver ou a receber).
+
+outputs:
+  - name: relatorio_markdown
+    type: markdown
+    required: true
+    description: Relatorio estruturado com itens numerados.
+  - name: itens_sem_comprovante
+    type: list
+    required: true
+    description: Itens sem NF/recibo anexado.
+  - name: parecer
+    type: enum
+    required: true
+    enum_values: [aprovado, pendente, reprovado]
+    description: Parecer final.
+
+errors:
+  - code: SEM_ITENS
+    when: itens vazio.
+  - code: TOTAL_INCONSISTENTE
+    when: soma dos itens difere de valor_total_gasto.

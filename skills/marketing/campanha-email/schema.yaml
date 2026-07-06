@@ -1,0 +1,39 @@
+name: campanha-email
+category: marketing
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - administrativo/email-corporativo
+
+composes_with:
+  - marketing/conteudo-linkedin
+
+inputs:
+  - name: objetivo
+    type: string
+    required: true
+    description: Objetivo da campanha.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+  - name: quantidade
+    type: integer
+    required: true
+    description: Numero de e-mails na sequencia.
+  - name: gatilhos
+    type: list
+    required: false
+    description: Gatilhos de envio.
+  - name: cta_principal
+    type: string
+    required: true
+    description: CTA principal.
+
+outputs:
+  - name: sequencia_markdown
+    type: markdown
+    required: true
+    description: Sequencia de e-mails com cronograma.

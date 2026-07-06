@@ -67,3 +67,15 @@ Construir narrativa de case com contexto, desafio, solução, resultados mensur�
 ## Possíveis integrações
 - CRM
 - Site
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para estruturar cases de sucesso a partir de resultados reais do cliente.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

@@ -62,3 +62,15 @@ Produzir artigos de blog completos, com pesquisa estruturada, narrativa clara e 
 ## Possíveis integrações
 - WordPress
 - Ghost
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para produzir artigos de blog com SEO básico, estrutura escaneável e CTA.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

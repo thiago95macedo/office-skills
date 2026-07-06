@@ -1,1 +1,17 @@
 Pitch de 12 slides para investidor.
+
+## Contexto
+
+Esta e a entrada esperada para a Skill `produtividade/gerador-apresentacao` no nivel **intermediario**.
+
+Descricao da Skill: Use para estruturar apresentações (slides) com storyline claro, slides objetivos e CTA.
+
+## Saida esperada
+
+Producao coerente com o objetivo da Skill, respeitando o tom corporativo e o vocabulario bloqueado definidos em `config/empresa.yaml`.
+
+## Verificacoes
+
+- Conteudo cobre o objetivo declarado.
+- Tom e linguagem estao consistentes.
+- Campos obrigatorios estao presentes.

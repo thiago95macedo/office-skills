@@ -1,0 +1,45 @@
+name: conteudo-linkedin
+category: marketing
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - marketing/artigo-blog
+  - marketing/conteudo-site
+
+inputs:
+  - name: tema
+    type: string
+    required: true
+    description: Tema do post.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+  - name: formato
+    type: enum
+    required: true
+    enum_values: [reflexao, case, dica, lancamento]
+    description: Formato do post.
+  - name: cta
+    type: string
+    required: true
+    description: Call to action.
+  - name: hashtags
+    type: list
+    required: false
+    description: Hashtags sugeridas.
+
+outputs:
+  - name: post_markdown
+    type: markdown
+    required: true
+    description: Post em Markdown (max 1300 caracteres).
+  - name: hashtags_sugeridas
+    type: list
+    required: true
+    description: Hashtags finais.

@@ -1,0 +1,72 @@
+name: analise-financeira
+description: Avaliacao financeira de novo contrato ou investimento
+version: 0.2.0
+tags:
+  - financeiro
+  - gestao
+  - decisao
+
+inputs:
+  - name: objeto
+    type: string
+    required: true
+    description: Objeto da avaliacao
+  - name: valor_estimado
+    type: number
+    required: true
+    description: Valor estimado
+  - name: beneficios_esperados
+    type: object
+    required: true
+    description: Beneficios esperados
+
+outputs:
+  - name: custos_decompostos
+    description: Decomposicao de custos
+  - name: justificativa
+    description: Justificativa financeira
+  - name: impacto_orcamento
+    description: Impacto no orcamento
+  - name: dashboard_decisao
+    description: Dashboard executivo para decisao
+
+steps:
+  - id: escopo
+    skill: comercial/escopo-tecnico
+    input_from:
+      servico: inputs.objeto
+    output: escopo
+
+  - id: custos
+    skill: financeiro/analise-custos
+    input_from:
+      escopo: escopo
+    output: decomposicao
+
+  - id: justificativa
+    skill: financeiro/justificativa-financeira
+    input_from:
+      objeto: inputs.objeto
+      valor: inputs.valor_estimado
+      beneficios_quantificados: inputs.beneficios_esperados
+    output: justif
+
+  - id: impacto_orcamento
+    skill: financeiro/orcamento-empresarial
+    input_from:
+      valor_adicional: inputs.valor_estimado
+    output: impacto
+
+  - id: riscos
+    skill: gestao/gestao-riscos
+    input_from:
+      contexto: inputs.objeto
+    output: riscos
+
+  - id: dashboard
+    skill: gestao/dashboard-executivo
+    input_from:
+      indicadores: impacto.indicadores
+    output: dashboard
+
+error_policy: abortar

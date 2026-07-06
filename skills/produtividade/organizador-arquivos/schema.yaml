@@ -1,0 +1,44 @@
+name: organizador-arquivos
+category: produtividade
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on: []
+
+composes_with:
+  - documentacao/organizador-documental
+  - conhecimento/classificador-documentos
+
+inputs:
+  - name: tipo_acervo
+    type: enum
+    required: true
+    enum_values: [projetos, financeiro, rh, contratos, geral]
+    description: Tipo de acervo.
+  - name: volumetria
+    type: integer
+    required: true
+    description: Volume estimado.
+  - name: usuarios
+    type: list
+    required: true
+    description: Usuarios.
+  - name: restricoes
+    type: list
+    required: false
+    description: "Restricoes (ex.: sem espacos nos nomes)."
+
+outputs:
+  - name: mapa_pastas
+    type: markdown
+    required: true
+    description: Estrutura de pastas proposta.
+  - name: convencao_nomes
+    type: markdown
+    required: true
+    description: Conveção de nomes.
+  - name: versionamento
+    type: markdown
+    required: true
+    description: Regra de versionamento.

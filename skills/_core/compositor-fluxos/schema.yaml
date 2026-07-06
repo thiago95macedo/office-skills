@@ -1,0 +1,59 @@
+name: compositor-fluxos
+category: _core
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/configurador-empresa
+
+composes_with: []
+
+inputs:
+  - name: fluxo_yaml
+    type: yaml
+    required: false
+    description: Definicao do fluxo em YAML (alternativa a passos).
+  - name: passos
+    type: list
+    required: false
+    description: Lista ordenada de Skills a executar, com mapeamento input/output.
+  - name: contexto_inicial
+    type: object
+    required: true
+    description: Variaveis iniciais (empresa, dados de entrada).
+  - name: politica_erro
+    type: enum
+    required: false
+    enum_values: [abortar, continuar, dry_run]
+    default: abortar
+    description: Comportamento em caso de erro.
+  - name: log_execucao
+    type: boolean
+    required: false
+    default: true
+    description: Se verdadeiro, gera log detalhado.
+
+outputs:
+  - name: artefatos_intermediarios
+    type: object
+    required: true
+    description: "Mapa {nome_step: saida_da_skill}."
+  - name: artefato_final
+    type: object
+    required: true
+    description: Ultima saida do fluxo (Skill final do pipeline).
+  - name: log_execucao
+    type: text
+    required: false
+    description: Log de execucao com timestamps e status de cada step.
+
+errors:
+  - code: FLUXO_VAZIO
+    when: nem fluxo_yaml nem passos foram informados.
+  - code: SKILL_INEXISTENTE
+    when: algum passo referencia Skill inexistente.
+  - code: CONTRATO_INCOMPATIVEL
+    when: saida de um step nao casa com entrada do proximo.
+  - code: POLITICA_ABORTAR
+    when: politica_erro=abortar e algum step falho

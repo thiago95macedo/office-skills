@@ -48,3 +48,23 @@ Converter transcrição em lista de tarefas estruturada com responsável, prazo,
 - Whisper
 - Otter.ai
 - Ferramentas de transcrição
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para converter transcrição de áudio/vídeo em lista estruturada de tarefas com responsável e prazo.
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

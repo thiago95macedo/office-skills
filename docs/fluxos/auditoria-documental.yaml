@@ -1,0 +1,66 @@
+name: auditoria-documental
+description: Revisao periodica do acervo de documentos
+version: 0.2.0
+tags:
+  - conhecimento
+  - auditoria
+  - governanca
+
+inputs:
+  - name: acervo_path
+    type: string
+    required: true
+    description: Caminho do acervo
+  - name: responsavel
+    type: string
+    required: true
+    description: Responsavel pela auditoria
+
+outputs:
+  - name: classificacao
+    description: Documentos classificados
+  - name: resumo_achados
+    description: Resumo executivo
+  - name: estrutura_proposta
+    description: Nova estrutura organizacional
+  - name: plano_regularizacao
+    description: Plano de acoes
+
+steps:
+  - id: classificacao
+    skill: conhecimento/classificador-documentos
+    input_from:
+      documentos: acervo_lista
+    output: classificacao
+
+  - id: resumo
+    skill: produtividade/resumo-executivo
+    input_from:
+      documento: relatorio_bruto
+    output: resumo_achados
+
+  - id: estrutura_proposta
+    skill: suporte/base-conhecimento
+    input_from:
+      conteudo_atual: classificacao.lista
+    output: estrutura
+
+  - id: mapa
+    skill: conhecimento/mapa-conhecimento
+    input_from:
+      documentos: classificacao
+    output: mapa
+
+  - id: plano
+    skill: gestao/plano-acao
+    input_from:
+      objetivo: "Regularizar acervo"
+    output: plano
+
+  - id: ata
+    skill: administrativo/ata-reuniao
+    input_from:
+      notas_reuniao: reuniao_auditoria
+    output: ata
+
+error_policy: abortar

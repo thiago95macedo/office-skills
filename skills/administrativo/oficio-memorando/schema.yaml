@@ -1,0 +1,40 @@
+name: oficio-memorando
+category: administrativo
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - administrativo/email-corporativo
+
+inputs:
+  - name: tipo
+    type: enum
+    required: true
+    enum_values: [oficio, memorando]
+    description: Tipo do documento.
+  - name: destinatario
+    type: object
+    required: true
+    description: Dados do destinatario (nome, cargo, orgao).
+  - name: assunto
+    type: string
+    required: true
+    description: Assunto.
+  - name: conteudo
+    type: text
+    required: true
+    description: Conteudo principal.
+
+outputs:
+  - name: documento_markdown
+    type: markdown
+    required: true
+    description: Documento formal com numeracao, cabecalho e assinatura.
+
+errors:
+  - code: TIPO_INVALIDO
+    when: tipo fora de {oficio, memorando}.

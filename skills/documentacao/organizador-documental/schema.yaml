@@ -1,0 +1,40 @@
+name: organizador-documental
+category: documentacao
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on: []
+
+composes_with:
+  - conhecimento/classificador-documentos
+  - produtividade/organizador-arquivos
+
+inputs:
+  - name: tipo_acervo
+    type: enum
+    required: true
+    enum_values: [contratos, projetos, financeiro, rh, geral]
+    description: Tipo de acervo.
+  - name: volumetria_estimada
+    type: integer
+    required: true
+    description: Estimativa de volume de documentos.
+  - name: usuarios
+    type: list
+    required: true
+    description: Usuarios do acervo.
+
+outputs:
+  - name: mapa_pastas
+    type: markdown
+    required: true
+    description: Mapa de pastas proposto.
+  - name: convencao_nomes
+    type: markdown
+    required: true
+    description: Convencao de nomes.
+  - name: guia_uso
+    type: markdown
+    required: true
+    description: Guia de uso do acervo.

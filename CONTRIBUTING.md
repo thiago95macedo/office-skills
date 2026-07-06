@@ -2,6 +2,13 @@
 
 Bem-vindo(a)! Este guia mostra como criar, revisar e melhorar Skills.
 
+## Contato
+
+Antes de começar uma contribuição maior, abra uma issue descrevendo a proposta para alinhamento. Para dúvidas rápidas:
+
+- E-mail: [contato@thiagomacedo.com.br](mailto:contato@thiagomacedo.com.br)
+- Site: [https://www.thiagomacedo.com.br](https://www.thiagomacedo.com.br)
+
 ## Antes de começar
 
 1. Leia o `README.md`, `ARCHITECTURE.md` e `GOVERNANCE.md`.

@@ -1,0 +1,46 @@
+name: atendimento-lead
+category: comercial
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - comercial/follow-up
+  - comercial/escopo-tecnico
+
+inputs:
+  - name: mensagem_lead
+    type: text
+    required: true
+    description: Mensagem original do lead.
+  - name: canal
+    type: enum
+    required: true
+    enum_values: [site, linkedin, email, indicacao, evento]
+    description: Canal de origem do lead.
+  - name: historico
+    type: object
+    required: false
+    description: Historico de interacoes anteriores.
+
+outputs:
+  - name: classificacao
+    type: enum
+    required: true
+    enum_values: [quente, morno, frio]
+    description: Classificacao do lead.
+  - name: resposta_inicial
+    type: text
+    required: true
+    description: Resposta inicial cordial.
+  - name: proxima_acao
+    type: text
+    required: true
+    description: Proxima acao sugerida.
+
+errors:
+  - code: SEM_MENSAGEM
+    when: mensagem_lead ausente.

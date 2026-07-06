@@ -69,3 +69,15 @@ Produzir descrição de vaga completa, com propósito do cargo, responsabilidade
 ## Possíveis integrações
 - Gupy, LinkedIn Jobs
 - ATS interno
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para redigir descrições de vaga objetivas, atrativas e alinhadas à cultura da empresa.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

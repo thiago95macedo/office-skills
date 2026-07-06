@@ -68,3 +68,15 @@ Planejar receitas, despesas e investimentos, comparando previsto vs realizado e 
 - ERP
 - BI
 - Planilhas corporativas
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para planejar e acompanhar receitas, despesas e investimentos por período (mensal, trimestral ou anual).
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

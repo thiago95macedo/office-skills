@@ -1,0 +1,48 @@
+name: organizador-informacao
+category: _core
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - administrativo/ata-reuniao
+  - produtividade/resumo-executivo
+  - suporte/classificador-tickets
+  - conhecimento/classificador-documentos
+
+inputs:
+  - name: fontes
+    type: list
+    required: true
+    description: Lista de textos brutos a serem organizados.
+  - name: objetivo_documento
+    type: text
+    required: true
+    description: Finalidade do documento final.
+  - name: template_saida
+    type: text
+    required: false
+    description: "Modelo de saida desejado (default: estruturado padrao)."
+
+outputs:
+  - name: documento_organizado
+    type: markdown
+    required: true
+    description: Documento estruturado com secoes nomeadas.
+  - name: secoes
+    type: list
+    required: true
+    description: Lista das secoes geradas, em ordem.
+  - name: fontes_mapeadas
+    type: object
+    required: false
+    description: Mapeamento entre cada fonte e a secao onde foi utilizada.
+
+errors:
+  - code: SEM_FONTES
+    when: nenhuma fonte informada.
+  - code: SEM_OBJETIVO
+    when: objetivo_documento ausent

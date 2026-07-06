@@ -1,0 +1,44 @@
+name: tratamento-objecoes
+category: comercial
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - comercial/proposta-comercial
+  - comercial/follow-up
+
+inputs:
+  - name: objecao
+    type: text
+    required: true
+    description: Objecao original do cliente.
+  - name: contexto_cliente
+    type: object
+    required: true
+    description: Contexto do cliente (segmento, porte, historico).
+  - name: evidencias_disponiveis
+    type: list
+    required: false
+    description: Evidencias e cases que sustentam o argumento.
+
+outputs:
+  - name: resposta_estruturada
+    type: markdown
+    required: true
+    description: "Resposta em 4 blocos: reconhecimento, argumentos, evidencias, proxima acao."
+  - name: argumentos
+    type: list
+    required: true
+    description: Lista de argumentos principais.
+  - name: proxima_acao
+    type: text
+    required: true
+    description: Acao recomendada.
+
+errors:
+  - code: SEM_OBJECAO
+    when: objecao nao informada.

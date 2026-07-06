@@ -55,3 +55,19 @@ Construir sequência de e-mails com objetivo claro, segmentação, conteúdo pro
 ## Possíveis integrações
 - Mailchimp
 - RD Station
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para estruturar sequência de e-mails marketing (lançamento, nutrição, reativação).
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

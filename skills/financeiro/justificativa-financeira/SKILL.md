@@ -69,3 +69,15 @@ Sustentar tecnicamente decisão de compra, contratação ou investimento com dad
 ## Possíveis integrações
 - BI
 - ERP
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para justificar aquisição ou investimento com base em ROI, payback, riscos e impacto no negócio.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

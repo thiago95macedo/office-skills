@@ -1,0 +1,46 @@
+name: resumo-executivo
+category: produtividade
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - gestao/dashboard-executivo
+  - _core/organizador-informacao
+
+inputs:
+  - name: documento
+    type: text
+    required: true
+    description: Documento a resumir.
+  - name: extensao_resumo
+    type: enum
+    required: true
+    enum_values: [curto, medio, longo]
+    description: Extensao desejada.
+  - name: foco
+    type: enum
+    required: true
+    enum_values: [conclusoes, decisoes, dados, executivo]
+    description: Foco do resumo.
+  - name: publico
+    type: string
+    required: true
+    description: Publico-alvo.
+
+outputs:
+  - name: resumo_markdown
+    type: markdown
+    required: true
+    description: Resumo em ate 1 pagina.
+  - name: bullets_conclusoes
+    type: list
+    required: true
+    description: Top-5 bullets de conclusoes.
+
+errors:
+  - code: SEM_DOCUMENTO
+    when: documento ausente.

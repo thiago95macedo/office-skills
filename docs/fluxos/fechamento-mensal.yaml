@@ -1,0 +1,77 @@
+name: fechamento-mensal
+description: Rotina completa de fechamento mensal financeiro
+version: 0.2.0
+tags:
+  - financeiro
+  - fechamento
+  - recorrente
+
+inputs:
+  - name: periodo
+    type: string
+    required: true
+    description: Periodo do fechamento (YYYY-MM)
+  - name: responsavel
+    type: string
+    required: true
+    description: Responsavel pelo fechamento
+
+outputs:
+  - name: checklist_executado
+    description: Checklist de fechamento
+  - name: cobrancas_enviadas
+    description: Cobrancas disparadas
+  - name: comparativo_orcamento
+    description: Comparativo orcamentario
+  - name: dashboard_mes
+    description: Dashboard do mes
+  - name: ata_fechamento
+    description: Ata da reuniao de fechamento
+  - name: comunicado_resultados
+    description: Comunicado de resultados
+
+steps:
+  - id: checklist
+    skill: documentacao/checklist
+    input_from:
+      finalidade: "Fechamento mensal"
+    output: checklist
+
+  - id: prestacao_contas
+    skill: financeiro/prestacao-contas
+    input_from:
+      periodo: inputs.periodo
+      responsavel: inputs.responsavel
+    output: prestacoes
+
+  - id: cobrancas
+    skill: financeiro/cobranca
+    input_from:
+      faturas_vencidas: pendentes
+    output: cobrancas
+
+  - id: comparativo
+    skill: financeiro/orcamento-empresarial
+    input_from:
+      periodo: inputs.periodo
+    output: comparativo
+
+  - id: dashboard
+    skill: gestao/dashboard-executivo
+    input_from:
+      indicadores: comparativo.indicadores
+    output: dashboard
+
+  - id: ata
+    skill: administrativo/ata-reuniao
+    input_from:
+      notas_reuniao: reuniao_fechamento
+    output: ata
+
+  - id: comunicado
+    skill: administrativo/comunicado-interno
+    input_from:
+      mensagem_central: "Resultados do mes"
+    output: comunicado
+
+error_policy: continuar

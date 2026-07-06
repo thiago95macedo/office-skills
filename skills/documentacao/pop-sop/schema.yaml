@@ -1,0 +1,58 @@
+name: pop-sop
+category: documentacao
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - documentacao/checklist
+  - documentacao/manual-tecnico
+
+inputs:
+  - name: titulo
+    type: string
+    required: true
+    description: Titulo do procedimento.
+  - name: objetivo
+    type: string
+    required: true
+    description: Objetivo do procedimento.
+  - name: escopo
+    type: string
+    required: true
+    description: Escopo de aplicacao.
+  - name: responsaveis
+    type: list
+    required: true
+    description: Lista de responsaveis.
+  - name: materiais
+    type: list
+    required: true
+    description: Lista de materiais/recursos.
+  - name: etapas
+    type: list
+    required: true
+    description: Etapas do procedimento (verbos no infinitivo).
+  - name: registros
+    type: list
+    required: true
+    description: Registros gerados.
+  - name: referencias
+    type: list
+    required: false
+    description: Referencias normativas ou tecnicas.
+
+outputs:
+  - name: pop_markdown
+    type: markdown
+    required: true
+    description: POP completo com versionamento.
+
+errors:
+  - code: SEM_TITULO
+    when: titulo ausente.
+  - code: ETAPAS_VAZIAS
+    when: etapas vazia.

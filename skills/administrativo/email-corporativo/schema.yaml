@@ -1,0 +1,51 @@
+name: email-corporativo
+category: administrativo
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - administrativo/comunicado-interno
+  - comercial/follow-up
+
+inputs:
+  - name: destinatario
+    type: string
+    required: true
+    description: Nome do destinatario.
+  - name: assunto
+    type: string
+    required: true
+    description: Assunto do e-mail.
+  - name: mensagem_central
+    type: text
+    required: true
+    description: Mensagem principal a ser comunicada.
+  - name: tom
+    type: enum
+    required: true
+    enum_values: [formal, semiformal, informal]
+    description: Tom do e-mail.
+  - name: anexos
+    type: list
+    required: false
+    description: Lista de anexos mencionados.
+
+outputs:
+  - name: email_markdown
+    type: markdown
+    required: true
+    description: E-mail formatado em Markdown.
+  - name: assunto_final
+    type: string
+    required: true
+    description: Assunto revisado.
+
+errors:
+  - code: SEM_DESTINATARIO
+    when: destinatario ausente.
+  - code: SEM_MENSAGEM
+    when: mensagem_central ausente.

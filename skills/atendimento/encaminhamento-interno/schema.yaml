@@ -1,0 +1,38 @@
+name: encaminhamento-interno
+category: atendimento
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - atendimento/triagem-mensagens
+
+inputs:
+  - name: demanda_original
+    type: string
+    required: true
+    description: Texto da demanda.
+  - name: area_destino
+    type: string
+    required: true
+    description: Area interna destino.
+  - name: contexto_cliente
+    type: object
+    required: true
+    description: Contexto do cliente.
+  - name: sla
+    type: string
+    required: true
+    description: SLA sugerido.
+  - name: responsavel_destino
+    type: string
+    required: false
+    description: Responsavel especifico.
+
+outputs:
+  - name: mensagem_repassse_markdown
+    type: markdown
+    required: true
+    description: Mensagem de repasse com contexto completo.

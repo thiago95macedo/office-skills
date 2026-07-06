@@ -1,0 +1,62 @@
+name: justificativa-financeira
+category: financeiro
+version: 0.2.0
+status: estavel
+priority: opcional
+
+depends_on:
+  - financeiro/analise-custos
+
+composes_with:
+  - financeiro/orcamento-empresarial
+  - comercial/proposta-comercial
+
+inputs:
+  - name: objeto
+    type: string
+    required: true
+    description: Objeto da aquisicao/investimento.
+  - name: valor
+    type: number
+    required: true
+    description: Valor do investimento.
+  - name: beneficios_quantificados
+    type: object
+    required: true
+    description: Beneficios mensuraveis (receita adicional, economia, etc.).
+  - name: beneficios_qualitativos
+    type: list
+    required: true
+    description: Beneficios nao monetarios.
+  - name: payback_estimado
+    type: string
+    required: true
+    description: "Payback estimado (ex.: 18 meses)."
+  - name: riscos
+    type: list
+    required: true
+    description: Riscos identificados.
+  - name: alternativas
+    type: list
+    required: false
+    description: Alternativas consideradas.
+
+outputs:
+  - name: documento_markdown
+    type: markdown
+    required: true
+    description: Documento de justificativa estruturado.
+  - name: roi
+    type: number
+    required: true
+    description: ROI calculado (percentual).
+  - name: cenarios
+    type: object
+    required: false
+    description: Cenarios de ROI.
+
+errors:
+  - code: SEM_OBJETO
+    when: objeto ausente.
+  - code: VALOR_INVALIDO
+    when: valor <= 0.

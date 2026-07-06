@@ -63,3 +63,15 @@ Estruturar plano de integração com marcos em 30, 60 e 90 dias, garantindo acol
 ## Possíveis integrações
 - HRIS
 - LMS
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para planejar e acompanhar a integração de novo colaborador nos primeiros 30/60/90 dias.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

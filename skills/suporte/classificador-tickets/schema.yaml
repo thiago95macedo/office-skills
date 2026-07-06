@@ -1,0 +1,50 @@
+name: classificador-tickets
+category: suporte
+version: 0.2.0
+status: estavel
+priority: essencial
+
+depends_on: []
+
+composes_with:
+  - suporte/faq-tecnico
+  - suporte/base-conhecimento
+
+inputs:
+  - name: descricao
+    type: string
+    required: true
+    description: Descricao do ticket.
+  - name: canal
+    type: enum
+    required: true
+    enum_values: [email, chat, portal, telefone]
+    description: Canal de origem.
+  - name: cliente_vip
+    type: boolean
+    required: false
+    description: Se cliente e VIP.
+  - name: regras_categorizacao
+    type: object
+    required: true
+    description: Regras de categorizacao.
+
+outputs:
+  - name: classificacao
+    type: object
+    required: true
+    description: Classificacao ITIL completa.
+  - name: categoria
+    type: enum
+    required: true
+    enum_values: [incidente, solicitacao, problema, mudanca]
+    description: Categoria ITIL.
+  - name: prioridade
+    type: enum
+    required: true
+    enum_values: [P1, P2, P3, P4]
+    description: Prioridade.
+  - name: sla
+    type: string
+    required: true
+    description: SLA atribuido.

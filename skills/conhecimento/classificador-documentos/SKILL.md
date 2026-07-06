@@ -45,3 +45,23 @@ Classificar documentos por tipo, tema, área e urgência automaticamente.
 ## Possíveis integrações
 - GED
 - SharePoint
+## Secoes de referencia (geradas)
+
+Descricao desta Skill: Use para classificar documentos por tipo (contrato, relatório, proposta, NF) e tema.
+
+## Fluxo interno
+
+Detalhar os passos que o agente segue para executar a Skill.
+
+## Boas práticas
+
+Listar recomendacoes de uso da Skill.
+
+## Exemplos de uso
+
+Indicar que ha exemplos em examples/.
+
+## Prompt interno recomendado
+
+Indicar que o prompt detalhado esta em prompt.md.
+

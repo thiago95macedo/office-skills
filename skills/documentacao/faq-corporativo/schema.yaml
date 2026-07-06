@@ -1,0 +1,37 @@
+name: faq-corporativo
+category: documentacao
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on:
+  - _core/redator-corporativo
+
+composes_with:
+  - suporte/faq-tecnico
+  - atendimento/triagem-mensagens
+
+inputs:
+  - name: perguntas_respostas
+    type: list
+    required: true
+    description: Lista de pares pergunta-resposta.
+  - name: audiencia
+    type: enum
+    required: true
+    enum_values: [interna, externa, ambas]
+    description: Audiencia do FAQ.
+  - name: tema
+    type: string
+    required: true
+    description: Tema do FAQ.
+
+outputs:
+  - name: faq_markdown
+    type: markdown
+    required: true
+    description: FAQ agrupado por tema.
+
+errors:
+  - code: SEM_PERGUNTAS
+    when: perguntas_respostas vazio.

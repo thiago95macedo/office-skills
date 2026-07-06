@@ -1,0 +1,31 @@
+name: faq-tecnico
+category: suporte
+version: 0.2.0
+status: estavel
+priority: recomendada
+
+depends_on: []
+
+composes_with:
+  - documentacao/faq-corporativo
+  - suporte/base-conhecimento
+
+inputs:
+  - name: produto
+    type: string
+    required: true
+    description: Nome do produto.
+  - name: perguntas_respostas
+    type: list
+    required: true
+    description: Lista de pares pergunta-resposta com referencia.
+  - name: referencias
+    type: list
+    required: true
+    description: Documentos de referencia tecnica.
+
+outputs:
+  - name: faq_markdown
+    type: markdown
+    required: true
+    description: FAQ agrupado por tema com referencias.
