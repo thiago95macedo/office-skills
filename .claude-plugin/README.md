@@ -68,3 +68,11 @@ As Skills consomem este arquivo em runtime; nenhuma Skill precisa ser duplicada.
 ## Próximos passos
 
 Veja `docs/mapa-dependencias.md` para entender como as Skills se compõem e `docs/fluxos/` para receitas prontas.
+
+## Contato
+
+Mantenedor: **Thiago Macêdo** — [contato@thiagomacedo.com.br](mailto:contato@thiagomacedo.com.br) — [https://www.thiagomacedo.com.br](https://www.thiagomacedo.com.br)
+
+## Contato
+
+Mantenedor: **Thiago Macêdo** — [contato@thiagomacedo.com.br](mailto:contato@thiagomacedo.com.br) — [https://www.thiagomacedo.com.br](https://www.thiagomacedo.com.br)
