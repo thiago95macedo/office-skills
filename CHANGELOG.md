@@ -6,6 +6,32 @@ Todas as alterações relevantes da biblioteca. Formato inspirado em Keep a Chan
 
 **Thiago Macêdo** — [contato@thiagomacedo.com.br](mailto:contato@thiagomacedo.com.br) — [https://www.thiagomacedo.com.br](https://www.thiagomacedo.com.br)
 
+## [0.3.0] — 2026-07-12
+
+### Adicionado
+- **Validação completa de 49 Skills** em todos os 12 domínios, com estrutura canônica: Quando usar / Quando NÃO usar / Entradas / Saídas / Fluxo interno / Boas práticas / Armadilhas comuns / Limitações / Dependências / Exemplos / Prompt interno / Possíveis integrações.
+- **Referências bibliográficas validadas** em todas as Skills reescritas, com foco brasileiro:
+  - Legislação: LGPD (Lei 13.709/2018), CDC (Lei 8.078/1990), CLT, Lei 14.181/2021 (superendividamento), Lei 14.611/2023 (faixa salarial), Lei 14.692/2023 (horário de cobrança), Decreto 7.962/2013 (e-commerce), Manual de Redação da Presidência 3ª ed. (2018), MROSC (Lei 13.019/2014 + 13.204/2015), IN TCU 84/2020, ABNT NBR 14724.
+  - Frameworks: PMBOK 8ª ed. (2025) com 6 princípios e 7 domínios, ISO 31000, ISO 9001, ISO 15489, ITIL 4, KCS v6, APMP BOK, PDCA, SMART, Nonaka SECI, Minto Pyramid, Duarte 10-20-30, Few/Tufte.
+  - Autores: Chiavenato (RH), Lacombe, Lage, Civita, Doerr (OKR), Grove, Drury, Kaplan & Norton, Rogers (empatia), Covey (escuta empática).
+- **5 Skills esqueléticas reescritas** completamente: `proposta-comercial`, `matriz-5w2h`, `kpi-okr`, `pop-sop`, `checklist`.
+- **5 prompts internos enriquecidos**: `matriz-5w2h/prompt.md`, `kpi-okr/prompt.md`, `pop-sop/prompt.md`, `checklist/prompt.md`, `proposta-comercial/prompt.md`.
+- **Adaptações PT-BR**: moeda BRL, datas ISO 8601, endereços com CEP, fuso America/Sao_Paulo, CNPJ/CPF, siglas BACEN/CVM/ANVISA/ANATEL, sistemas brasileiros (SEI, gov.br, eSocial, Pix, SIAFI).
+- **Tipos de empresa brasileira**: MEI, EPP, Simples Nacional, Lucro Presumido, Lucro Real.
+- **Seção Armadilhas Comuns** em todas as Skills reescritas, baseada em práticas documentadas.
+
+### Corrigido
+- **Bug**: caracteres chineses `礼貌` (lǐmào = "cortesia") no SKILL.md de `redator-corporativo`, linha 48.
+- **Placeholders órfãos**: bloco `## Secoes de referencia (geradas)` colado em ~30 Skills foi removido nas Skills reescritas.
+- **Prompts de 1 linha** em 5 Skills críticas foram expandidos para 50-70 linhas estruturadas.
+
+### Mudado
+- `version` bumped de 0.2.0 → 0.3.0 em `plugin.json`, `marketplace.json`, `README.md` e `INDEX.md`.
+- `.gitignore` reescrito com cobertura multi-OS (Mac, Windows, Linux), Claude Code, MCP servers (`.playwright-mcp/`), worktrees e segredos.
+
+### Estatísticas
+- 49 arquivos modificados: +4744 linhas / -1618 linhas.
+
 ## [0.2.0] — 2026-07-06
 
 ### Adicionado

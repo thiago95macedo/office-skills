@@ -5,7 +5,7 @@
 ![Skills](https://img.shields.io/badge/skills-60-blueviolet)
 ![Categorias](https://img.shields.io/badge/categorias-12-blue)
 ![Status](https://img.shields.io/badge/status-stable-success)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-0.2.0-orange)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-0.3.0-orange)
 ![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
 
 Office Skills é uma biblioteca corporativa inspirada em padrões de engenharia de software (em particular, na disciplina de **Skills como documentação executável** do projeto Superpowers). Cada Skill é um pequeno módulo independente, com responsabilidade clara, prompt interno versionado, exemplos e testes.

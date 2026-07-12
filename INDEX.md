@@ -1,8 +1,10 @@
 # Catálogo de Skills — Office Skills
 
-Catálogo navegável das Skills disponíveis. Versão agregada: **0.2.0**.
+Catálogo navegável das Skills disponíveis. Versão agregada: **0.3.0**.
 
 > **Total: 60 Skills** distribuídas em 12 categorias. Veja `docs/mapa-dependencias.md` para entender como se relacionam, e `docs/fluxos/` para receitas que combinam várias Skills.
+
+> **Novidades da 0.3.0**: 49 Skills validadas e enriquecidas com seções canônicas (Quando usar / Quando NÃO usar / Entradas / Saídas / Fluxo / Boas práticas / Armadilhas comuns / Limitações), referências bibliográficas validadas e foco brasileiro (LGPD, CDC, CLT, MROSC, Manual de Redação da Presidência, PMBOK 8ª ed., ITIL 4, KCS v6, entes regulatórios brasileiros).
 
 > **Legenda de prioridade**
 > ⭐ Essencial · 🔶 Recomendada · ⚪ Opcional

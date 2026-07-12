@@ -1,7 +1,7 @@
 {
   "name": "office-skills",
   "description": "Biblioteca corporativa de Skills (60 Skills em 12 dominios) para automacao administrativa, comercial, tecnica e gerencial. Estrutura padronizada com SKILL.md, prompt.md, examples/, templates/ e tests/ para cada Skill. Configuravel por empresa via config/empresa.yaml.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Thiago Macedo",
     "email": "contato@thiagomacedo.com.br",

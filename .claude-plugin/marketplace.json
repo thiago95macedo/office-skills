@@ -10,7 +10,7 @@
     {
       "name": "office-skills",
       "description": "Biblioteca corporativa de Skills reusaveis (60 Skills em 12 dominios) para Claude Code. Cobre comercial, administrativo, financeiro, gestao, documentacao, RH, marketing, atendimento, suporte, produtividade e conhecimento. Inspirada no padrao de Skills como documentacao executavel.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "source": "./",
       "author": {
         "name": "Thiago Macedo",
