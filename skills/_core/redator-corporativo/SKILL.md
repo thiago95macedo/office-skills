@@ -45,7 +45,7 @@ Markdown com o texto final revisado, observações pontuais (em bloco `>`) e ver
 2. Identificar objetivo e público.
 3. Se houver rascunho, revisar; senão, redigir do zero.
 4. Aplicar tom configurado e remover vocabulário bloqueado.
-5. Validar checklist (clareza, tamanho,礼貌).
+5. Validar checklist (clareza, tamanho, tom, vocabulário bloqueado).
 6. Entregar texto final + comentários opcionais.
 
 ## Boas práticas

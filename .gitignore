@@ -1,40 +1,145 @@
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
+# ─────────────────────────────────────────────────────────────────────
+# Office Skills .gitignore
+# Organização: por categoria, com seções nomeadas e exemplos por linha
+# Caracteres universais: `#` comentário, `/` final indica diretório
+# ─────────────────────────────────────────────────────────────────────
 
-# Editors
+# ── Sistema operacional ──────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+~$*            # arquivos temporários do Office (~$word.docx, ~$planilha.xlsx)
+*.~lock*       # lock files do LibreOffice
+*.tmp          # quando criado fora de tmp/ (ex.: diretório home)
+
+# Linux
+*~
+
+# ── Editores / IDEs ──────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
+*.bak
+*~
+.fleet/
+.fvm/
 
-# Python (scripts de validação)
+# ── Claude Code / Cursor / Copilot ──────────────────────────────────
+.claude/
+.cursor/
+.aider*
+.continue/
+
+# ── MCP servers e agentes de browser ────────────────────────────────
+.playwright-mcp/
+*Chrome*DevTools/
+*.mcp.json
+
+# ── Python (scripts de validação) ──────────────────────────────────
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
+*.egg
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
 
-# Node (se houver)
+# ── Node / TypeScript (caso adicionado) ─────────────────────────────
 node_modules/
-.npm-global/
+.npm/
+.yarn/
+.pnp.*
+dist/
+build/
+*.tsbuildinfo
 
-# Logs
-*.log
-logs/
-
-# Variáveis locais / configuração pessoal por empresa
-config/empresa.yaml
-config/*.local.yaml
-.env
-.env.local
-
-# Saídas temporárias
+# ── Outputs e artefatos temporários ─────────────────────────────────
 output/
+outputs/
 tmp/
-*.tmp
-*.bak
-
-# Cache de validação
+temp/
 .cache/
 .validate-cache/
+*.log
+logs/
+*.bak
+*.swp
+*.tmp
+.DS_Store.bak
+
+# ── Configuração local (segredos e personalização por empresa) ──────
+config/empresa.yaml
+config/*.local.yaml
+config/*.local.yml
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+secrets.yml
+
+# ── OS / runtime adicional ────────────────────────────────────────
+# Windows
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Oo]ut/
+
+# ── Logs e traces ──────────────────────────────────────────────────
+*.log.*
+*.trace
+*.pid
+*.seed
+*.pid.lock
+
+# ── Documentos e planilhas gerados ─────────────────────────────────
+# Não commit: PDFs gerados, DOCX editados, XLSX novos, etc.
+*.pdf.bak
+~$*.docx
+~$*.xlsx
+~$*.pptx
+~$*.pdf
+
+# ── Claude Code — caches locais ─────────────────────────────────────
+# Manter .claude/ ignorado inclui scratch/, settings.local.json,
+# worktrees/, agents/. Não ignorar .claude-plugin/ (versionado).
+.claude-plugin/*/crashes/
+.claude-plugin/*/cache/
+
+# ── OS / temp adicional ────────────────────────────────────────────
+# Diretório tempdo Windows por usuário
+%TEMP%/
+%TMP%/
+
+# ── Worktrees (git) ────────────────────────────────────────────────
+.worktrees/
+
+# ── Notas finais ────────────────────────────────────────────────────
+# Para ignorar um arquivo/pasta já rastreado:  git rm --cached ARQUIVO
+# Para parar de ignorar:                              git rm --ignored ARQUIVO
+# Para checar o que está sendo ignorado:               git check-ignore -v CAMINHO
